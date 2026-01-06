@@ -3,9 +3,7 @@ name: Deploy MkDocs Site
 on:
   push:
     branches:
-      - main
       - master
-  workflow_dispatch:
 
 permissions:
   contents: write
@@ -26,16 +24,17 @@ jobs:
           python-version: "3.11"
           cache: pip
 
-      - name: Install dependencies
+      - name: Install MkDocs
         run: |
           pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install mkdocs-material
 
       - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Deploy MkDocs to GitHub Pages
+      - name: Build and Deploy MkDocs
         run: |
-          mkdocs gh-deploy --config-file .mkdocs/mkdocs.yml --force --verbose
+          cd docs-site
+          mkdocs gh-deploy --force --verbose
