@@ -76,6 +76,7 @@ exclude_docs: |
   .venv/
   site/
   .mkdocs/
+  docs-site/
   .gitignore
   mkdocs.yml
   mkdocs.yml.backup
@@ -115,38 +116,559 @@ nav:
   - Home: index.md
   
   - DevOps Core:
-    - DEVOPS-CORE/README.md
-    - DevOps Topics: DEVOPS-CORE/01-DEVOPS-TOPICS/DevOps Topics.md
-    - Operating System:
-      - Linux: DEVOPS-CORE/02-OPERATING-SYSTEM/Linux/README.md
-    - Git: DEVOPS-CORE/03-GIT/README.md
-    - Networking: DEVOPS-CORE/04-NETWORKING/README.md
-    - Containerization: DEVOPS-CORE/05-CONTAINERIZATION/README.md
-    - CI/CD: DEVOPS-CORE/06-CICD/README.md
-    - Deployment Strategies: DEVOPS-CORE/07-DEPLOYMENT-STRATEGIES/README.md
-    - Infrastructure as Code: DEVOPS-CORE/08-IAC/Terraform/README.md
-    - Configuration Management: DEVOPS-CORE/09-CONFIG-MANAGEMENT/Ansible/README.md
-    - Message Queues: DEVOPS-CORE/10-MESSAGE-QUEUES/Apache-Kafka/apache-kafka.md
-    - NGINX: DEVOPS-CORE/11-NGINX/0-NGINX-Overview.md
-    - Observability: DEVOPS-CORE/12-OBSERVABILITY/README.md
-    - Caching: DEVOPS-CORE/13-CACHING/README.md
-    - Secrets Management: DEVOPS-CORE/14-SECRETS-MANAGEMENT/Hashicorp-Vault/README.md
-    - System Design: DEVOPS-CORE/15-SYSTEM-DESIGN/README.md
-    - Interview Questions: DEVOPS-CORE/16-INTERVIEW-QUESTIONS/README.md
-  
+    - Overview: DEVOPS-CORE/README.md
+    
+    - 01. DevOps Topics:
+      - DevOps Topics: DEVOPS-CORE/01-DEVOPS-TOPICS/DevOps Topics.md
+    
+    - 02. Operating System:
+      - Linux:
+        - Overview: DEVOPS-CORE/02-OPERATING-SYSTEM/Linux/README.md
+        - Basics & Navigation: DEVOPS-CORE/02-OPERATING-SYSTEM/Linux/01-Basics-Navigation.md
+        - Permissions: DEVOPS-CORE/02-OPERATING-SYSTEM/Linux/02-Permissions.md
+        - Package Management: DEVOPS-CORE/02-OPERATING-SYSTEM/Linux/03-Package-Management.md
+        - Systemctl & Services: DEVOPS-CORE/02-OPERATING-SYSTEM/Linux/04-Systemctl-Services.md
+        - Process Management: DEVOPS-CORE/02-OPERATING-SYSTEM/Linux/05-Process-Management.md
+        - System Monitoring: DEVOPS-CORE/02-OPERATING-SYSTEM/Linux/06-System-Monitoring.md
+        - File Management: DEVOPS-CORE/02-OPERATING-SYSTEM/Linux/07-File-Management.md
+        - Networking: DEVOPS-CORE/02-OPERATING-SYSTEM/Linux/08-Networking.md
+        - Shell Scripting: DEVOPS-CORE/02-OPERATING-SYSTEM/Linux/09-Shell-Scripting.md
+    
+    - 03. Git:
+      - Overview: DEVOPS-CORE/03-GIT/README.md
+      - Git Fundamentals: DEVOPS-CORE/03-GIT/0-Git-Fundamentals.md
+      - Git Commands: DEVOPS-CORE/03-GIT/1-Git-Commands.md
+      - GitHub Token Setup: DEVOPS-CORE/03-GIT/2-GitHub-Token-Setup.md
+
+    - 04. Networking:
+      - Overview: DEVOPS-CORE/04-NETWORKING/README.md
+      - Networking Basics: DEVOPS-CORE/04-NETWORKING/01-Networking-Basics.md
+      - IP Addressing: DEVOPS-CORE/04-NETWORKING/01-IP-Addressing.md
+      - Subnetting & CIDR: DEVOPS-CORE/04-NETWORKING/02-Subnetting-and-CIDR.md
+      - Ports & Protocols: DEVOPS-CORE/04-NETWORKING/03-Ports-and-Protocols.md
+    
+    - 05. Containerization:
+      - Overview: DEVOPS-CORE/05-CONTAINERIZATION/README.md
+      - Docker:
+        - Overview: DEVOPS-CORE/05-CONTAINERIZATION/Docker/README.md
+        - Docker Fundamentals: DEVOPS-CORE/05-CONTAINERIZATION/Docker/0-Docker-Fundamentals.md
+        - Installation: DEVOPS-CORE/05-CONTAINERIZATION/Docker/1-Installation.md
+        - Docker Commands: DEVOPS-CORE/05-CONTAINERIZATION/Docker/2-Docker-Commands.md
+        - Dockerfile: DEVOPS-CORE/05-CONTAINERIZATION/Docker/3-Dockerfile.md
+        - Docker Compose: DEVOPS-CORE/05-CONTAINERIZATION/Docker/4-Docker-compose.md
+        - Advanced Topics: DEVOPS-CORE/05-CONTAINERIZATION/Docker/5-Advanced-Topics.md
+    
+    - 06. CI/CD:
+      - Overview: DEVOPS-CORE/06-CICD/README.md
+      - CI/CD Fundamentals: DEVOPS-CORE/06-CICD/0-CICD-Fundamentals.md
+      - Jenkins:
+        - Overview: DEVOPS-CORE/06-CICD/Jenkins/README.md
+        - Jenkins Guide: DEVOPS-CORE/06-CICD/Jenkins/Jenkins.md
+        - Java Maven Project: DEVOPS-CORE/06-CICD/Jenkins/java-maven-sonar-argocd-helm-k8s/README.md
+        - Spring Boot App: DEVOPS-CORE/06-CICD/Jenkins/java-maven-sonar-argocd-helm-k8s/spring-boot-app/README.md
+      - GitHub Actions: DEVOPS-CORE/06-CICD/GitHub-Actions/GitHub-Actions.md
+      - GitLab CI: DEVOPS-CORE/06-CICD/GitLab-CI/GitLab-CI.md
+      - Azure DevOps: DEVOPS-CORE/06-CICD/Azure-DevOps/Azure-DevOps.md
+      - ArgoCD: DEVOPS-CORE/06-CICD/ArgoCD/README.md
+      - SonarQube:
+        - Overview: DEVOPS-CORE/06-CICD/SonarQube/README.md
+        - Server Setup: DEVOPS-CORE/06-CICD/SonarQube/1-Server-Setup.md
+        - Project Local Scan: DEVOPS-CORE/06-CICD/SonarQube/2-Project-Local-Scan.md
+        - Docker Local Scan: DEVOPS-CORE/06-CICD/SonarQube/3-Docker-Local-Scan.md
+    
+    - 07. Deployment Strategies:
+      - Overview: DEVOPS-CORE/07-DEPLOYMENT-STRATEGIES/README.md
+      - Deployment Strategies: DEVOPS-CORE/07-DEPLOYMENT-STRATEGIES/0-Deployment-Strategies.md
+
+    - 08. Infrastructure as Code:
+      - Terraform:
+        - Overview: DEVOPS-CORE/08-IAC/Terraform/README.md
+        - Installation: DEVOPS-CORE/08-IAC/Terraform/installation/README.md
+        - Structure & Commands: DEVOPS-CORE/08-IAC/Terraform/Structure and Commands/README.md
+        - Advanced Configuration:
+          - Overview: DEVOPS-CORE/08-IAC/Terraform/Advanced Configuration/README.md
+          - Variables & Output: DEVOPS-CORE/08-IAC/Terraform/Advanced Configuration/variable-output.md
+          - Conditional & Functions: DEVOPS-CORE/08-IAC/Terraform/Advanced Configuration/conditional-expression-and-builtin-function.md
+          - Multi Providers: DEVOPS-CORE/08-IAC/Terraform/Advanced Configuration/multi-providers-resources.md
+        - Modules:
+          - Overview: DEVOPS-CORE/08-IAC/Terraform/Modules/README.md
+          - Modules Guide: DEVOPS-CORE/08-IAC/Terraform/Modules/terraform-modules-guide.md
+        - Workspaces:
+          - Overview: DEVOPS-CORE/08-IAC/Terraform/Workspaces/README.md
+          - Workspaces Examples: DEVOPS-CORE/08-IAC/Terraform/Workspaces/terraform-workspaces-examples.md
+        - Remote Backend: DEVOPS-CORE/08-IAC/Terraform/remote backend/README.md
+        - Userdata & Provisioning: DEVOPS-CORE/08-IAC/Terraform/userdata and provisioning/README.md
+        - Hashicorp Vault: DEVOPS-CORE/08-IAC/Terraform/hashicorp vault/README.md
+      - Packer:
+        - Packer Guide: DEVOPS-CORE/08-IAC/Packer/packer.md
+        - Packer Examples: DEVOPS-CORE/08-IAC/Packer/packer-examples.md
+    
+    - 09. Configuration Management:
+      - Ansible:
+        - Overview: DEVOPS-CORE/09-CONFIG-MANAGEMENT/Ansible/README.md
+        - Ansible Guide: DEVOPS-CORE/09-CONFIG-MANAGEMENT/Ansible/0-ansible.md
+        - Ansible Fundamentals: DEVOPS-CORE/09-CONFIG-MANAGEMENT/Ansible/01-Ansible-Fundamentals.md
+        - SSH Authentication & Inventory: DEVOPS-CORE/09-CONFIG-MANAGEMENT/Ansible/02-SSH-Authentication-and-Inventory.md
+        - Password Authentication: DEVOPS-CORE/09-CONFIG-MANAGEMENT/Ansible/1-password-authentication.md
+        - Playbook Examples: DEVOPS-CORE/09-CONFIG-MANAGEMENT/Ansible/ansible-playbook-examples.md
+      - Consul:
+        - Consul Guide: DEVOPS-CORE/09-CONFIG-MANAGEMENT/Consul/Consul.md
+        - Consul Docker: DEVOPS-CORE/09-CONFIG-MANAGEMENT/Consul/consul-docker.md
+        - Consul Docker ACL: DEVOPS-CORE/09-CONFIG-MANAGEMENT/Consul/consul-docker-acl.md
+
+    - 10. Message Queues:
+      - Apache Kafka:
+        - Apache Kafka: DEVOPS-CORE/10-MESSAGE-QUEUES/Apache-Kafka/apache-kafka.md
+        - Kafka UI: DEVOPS-CORE/10-MESSAGE-QUEUES/Apache-Kafka/kafka-ui.md
+      - Apache Airflow:
+        - Apache Airflow: DEVOPS-CORE/10-MESSAGE-QUEUES/Apache-Airflow/apache-airflow.md
+        - Docker Setup: DEVOPS-CORE/10-MESSAGE-QUEUES/Apache-Airflow/docker-setup.md
+        - DAG Examples: DEVOPS-CORE/10-MESSAGE-QUEUES/Apache-Airflow/airflow-dag-examples.md
+      - RabbitMQ:
+        - RabbitMQ Guide: DEVOPS-CORE/10-MESSAGE-QUEUES/RabbitMQ/rabbitmq.md
+        - Docker Compose: DEVOPS-CORE/10-MESSAGE-QUEUES/RabbitMQ/docker-compose-rabbitmq.md
+        - UI Workflow: DEVOPS-CORE/10-MESSAGE-QUEUES/RabbitMQ/ui-workflow.md
+    
+    - 11. NGINX:
+      - NGINX Overview: DEVOPS-CORE/11-NGINX/0-NGINX-Overview.md
+      - Web Server: DEVOPS-CORE/11-NGINX/1-WEB-SERVER.md
+      - Reverse Proxy: DEVOPS-CORE/11-NGINX/2-REVERSE-PROXY.md
+      - API Key Authentication: DEVOPS-CORE/11-NGINX/3-API-KEY-AUTHENTICATION.md
+      - Load Balancer: DEVOPS-CORE/11-NGINX/4-LOAD-BALANCER.md
+      - Caching Server: DEVOPS-CORE/11-NGINX/5-CACHING SERVER.md
+      - API Gateway: DEVOPS-CORE/11-NGINX/6-API-GATEWAY.md
+      - SSL/TLS Termination: DEVOPS-CORE/11-NGINX/7-SSL-TLS-Termination.md
+    
+    - 12. Observability:
+      - Overview: DEVOPS-CORE/12-OBSERVABILITY/README.md
+      - Grafana Observability Stack:
+        - Overview: DEVOPS-CORE/12-OBSERVABILITY/Grafana-Observability-Stack/0-Grafana-Observability-Stack.md
+        - Prometheus Tutorial: DEVOPS-CORE/12-OBSERVABILITY/Grafana-Observability-Stack/📈 Prometheus – Full End-to-End Tutorial.md
+        - Prometheus Node Exporter: DEVOPS-CORE/12-OBSERVABILITY/Grafana-Observability-Stack/📊 Prometheus Node Exporter – Full Tutorial.md
+        - Grafana + Prometheus: DEVOPS-CORE/12-OBSERVABILITY/Grafana-Observability-Stack/📊 Grafana + Prometheus – Full End-to-End Tutorial.md
+        - Grafana for Loki: DEVOPS-CORE/12-OBSERVABILITY/Grafana-Observability-Stack/📊 Grafana for Loki – Complete Log Monitoring Tutorial.md
+        - Promtail Tutorial: DEVOPS-CORE/12-OBSERVABILITY/Grafana-Observability-Stack/📜 Promtail – Full End-to-End Tutorial (with Loki & Grafana).md
+        - Promtail + systemd: DEVOPS-CORE/12-OBSERVABILITY/Grafana-Observability-Stack/🔧 Promtail + systemd (journalctl) for `pay2chat`.md
+        - Loki Storage: DEVOPS-CORE/12-OBSERVABILITY/Grafana-Observability-Stack/📦 Grafana Loki Storage – S3 - Azure Blob - DO Spaces (End-to-End).md
+      - Helm Deployments:
+        - Grafana Helm: DEVOPS-CORE/12-OBSERVABILITY/Helm-Deployments/grafana-helm.md
+        - Prometheus Helm: DEVOPS-CORE/12-OBSERVABILITY/Helm-Deployments/prometheus-helm.md
+      - OpenTelemetry:
+        - OpenTelemetry: DEVOPS-CORE/12-OBSERVABILITY/OpenTelemetry/OpenTelemetry.md
+        - Setup Code: DEVOPS-CORE/12-OBSERVABILITY/OpenTelemetry/OpenTelemetry-Setup-Code.md
+
+    - 13. Caching:
+      - Overview: DEVOPS-CORE/13-CACHING/README.md
+      - Caching Fundamentals: DEVOPS-CORE/13-CACHING/0-CACHING.md
+      - System Design Patterns: DEVOPS-CORE/13-CACHING/3-System-Design-Patterns.md
+      - Redis:
+        - Redis Fundamentals: DEVOPS-CORE/13-CACHING/Redis/0-Redis-Fundamentals.md
+        - NodeJS Redis Example: DEVOPS-CORE/13-CACHING/Redis/1-NodeJS-Redis-Example.md
+        - Go Redis Example: DEVOPS-CORE/13-CACHING/Redis/2-Go-Redis-Example.md
+        - Redis Deployment: DEVOPS-CORE/13-CACHING/Redis/3-Redis-Deployment.md
+        - Redis High Availability: DEVOPS-CORE/13-CACHING/Redis/4-Redis-High-Availability.md
+    
+    - 14. Secrets Management:
+      - Hashicorp Vault:
+        - Overview: DEVOPS-CORE/14-SECRETS-MANAGEMENT/Hashicorp-Vault/README.md
+        - Vault Fundamentals: DEVOPS-CORE/14-SECRETS-MANAGEMENT/Hashicorp-Vault/01-Vault-Fundamentals.md
+        - Docs:
+          - Vault Docs: DEVOPS-CORE/14-SECRETS-MANAGEMENT/Hashicorp-Vault/Docs/docs.md
+          - Docker Setup: DEVOPS-CORE/14-SECRETS-MANAGEMENT/Hashicorp-Vault/Docs/docker-setup.md
+    
+    - 15. System Design:
+      - Overview: DEVOPS-CORE/15-SYSTEM-DESIGN/README.md
+      - Microservices Architecture: DEVOPS-CORE/15-SYSTEM-DESIGN/01-Microservices-Architecture.md
+      - Event Driven Architecture: DEVOPS-CORE/15-SYSTEM-DESIGN/02-Event-Driven-Architecture.md
+      - Circuit Breaker: DEVOPS-CORE/15-SYSTEM-DESIGN/08-Circuit-Breaker.md
+      - Load Balancing: DEVOPS-CORE/15-SYSTEM-DESIGN/10-Load-Balancing.md
+    
+    - 16. Interview Questions:
+      - Overview: DEVOPS-CORE/16-INTERVIEW-QUESTIONS/README.md
+      - DevOps Fundamentals: DEVOPS-CORE/16-INTERVIEW-QUESTIONS/01-DevOps-Fundamentals.md
+      - Kubernetes: DEVOPS-CORE/16-INTERVIEW-QUESTIONS/04-Kubernetes.md
+
   - Cloud Platforms:
-    - AWS: CLOUD/AWS/0-AWS-SERVICES.md
-    - Azure: CLOUD/AZURE/README.md
-  
+    
+    - AWS:
+      - AWS Services Overview: CLOUD/AWS/0-AWS-SERVICES.md
+      - Region & AZs: CLOUD/AWS/AWS Region and AZs.md
+      
+      - Elastic Beanstalk:
+        - AWS Elastic Beanstalk: CLOUD/AWS/AWS BEANSTALK/AWS Elastic Beanstalk.md
+      
+      - Budgets & Billing:
+        - AWS Budgets & Billing: CLOUD/AWS/AWS Budgets and Billing/AWS Budgets and Billing.md
+      
+      - CDN:
+        - AWS CDN Overview: CLOUD/AWS/AWS CDN/0-AWS-CDN.md
+        - CloudFront: CLOUD/AWS/AWS CDN/CloudFront.md
+        - Global Accelerator: CLOUD/AWS/AWS CDN/AWS Global Accelerator.md
+      
+      - Containers:
+        - AWS Containers Overview: CLOUD/AWS/AWS CONTAINERS/0-AWS-CONTAINERS.md
+        - ECR: CLOUD/AWS/AWS CONTAINERS/AWS ECR.md
+        - ECS: CLOUD/AWS/AWS CONTAINERS/AWS ECS.md
+        - EKS: CLOUD/AWS/AWS CONTAINERS/AWS EKS.md
+        - Fargate: CLOUD/AWS/AWS CONTAINERS/AWS Fargate.md
+        - App Runner: CLOUD/AWS/AWS CONTAINERS/AWS App Runner.md
+      
+      - Data & Analytics:
+        - Data & Analytics Overview: CLOUD/AWS/AWS DATA & ANALYTICS/0-AWS-DATA-ANALYTICS.md
+        - Athena: CLOUD/AWS/AWS DATA & ANALYTICS/AWS-Athena.md
+        - Glue: CLOUD/AWS/AWS DATA & ANALYTICS/AWS-Glue.md
+        - Lake Formation: CLOUD/AWS/AWS DATA & ANALYTICS/AWS-Lake-Formation.md
+        - Kinesis Data Analytics: CLOUD/AWS/AWS DATA & ANALYTICS/Kinesis-Data-Analytics.md
+        - EMR: CLOUD/AWS/AWS DATA & ANALYTICS/Amazon-EMR.md
+        - MSK: CLOUD/AWS/AWS DATA & ANALYTICS/Amazon-MSK.md
+        - OpenSearch: CLOUD/AWS/AWS DATA & ANALYTICS/Amazon-OpenSearch.md
+        - QuickSight: CLOUD/AWS/AWS DATA & ANALYTICS/Amazon-QuickSight.md
+        - Redshift: CLOUD/AWS/AWS DATA & ANALYTICS/Amazon-Redshift.md
+      
+      - DNS:
+        - Route 53: CLOUD/AWS/AWS DNS/AWS Route 53.md
+      
+      - EC2:
+        - EC2 Overview: CLOUD/AWS/AWS EC2 [ Elastic Cloud Compute ]/AWS-EC2 -Elastic-Cloud-Compute.md
+      
+      - Databases:
+        - Databases Overview: CLOUD/AWS/AWS FUNDAMENTALS DATABASES/0-AWS-FUNDAMENTALS-DATABASES.md
+        - RDS: CLOUD/AWS/AWS FUNDAMENTALS DATABASES/1-AWS-RDS.md
+        - Aurora: CLOUD/AWS/AWS FUNDAMENTALS DATABASES/2-AWS-AURORA.md
+        - ElastiCache: CLOUD/AWS/AWS FUNDAMENTALS DATABASES/3-AWS-ElastiCache.md
+        - DynamoDB: CLOUD/AWS/AWS FUNDAMENTALS DATABASES/4-AWS-DynamoDB.md
+        - S3 as Database: CLOUD/AWS/AWS FUNDAMENTALS DATABASES/5-AWS-S3.md
+        - DocumentDB: CLOUD/AWS/AWS FUNDAMENTALS DATABASES/6-AWS-DOCUMENTDB.md
+        - Neptune: CLOUD/AWS/AWS FUNDAMENTALS DATABASES/7-AWS-Neptune.md
+        - Keyspaces: CLOUD/AWS/AWS FUNDAMENTALS DATABASES/8-Amazon-Keyspaces.md
+        - QLDB: CLOUD/AWS/AWS FUNDAMENTALS DATABASES/9- Amazon-QLDB.md
+        - Timestream: CLOUD/AWS/AWS FUNDAMENTALS DATABASES/10-Amazon-Timestream.md
+
+      - IAM Advanced:
+        - IAM Advanced Overview: CLOUD/AWS/AWS IAM (ADVANCED)/0-AWS-IAM-ADVANCED.md
+        - AWS Organization: CLOUD/AWS/AWS IAM (ADVANCED)/1-AWS-ORGANIZATION.md
+        - IAM Conditions: CLOUD/AWS/AWS IAM (ADVANCED)/2-IAM-CONDITIONS.md
+        - IAM Roles vs Resource Policy: CLOUD/AWS/AWS IAM (ADVANCED)/3-IAM-ROLES-VS-RESOURCE-BASEED-POLICY.md
+        - IAM Policy Evaluation: CLOUD/AWS/AWS IAM (ADVANCED)/4-IAM-POLICY-EVALUATION-LOGIC.md
+        - IAM Identity Center: CLOUD/AWS/AWS IAM (ADVANCED)/5-AWS-IAM-IDENTITY-CENTER.md
+        - Directory Service: CLOUD/AWS/AWS IAM (ADVANCED)/6-AWS-DIRECTORY-SERVICE.md
+        - Control Tower: CLOUD/AWS/AWS IAM (ADVANCED)/7-AWS-CONTROL TOWER.md
+      
+      - IAM & CLI:
+        - IAM & CLI: CLOUD/AWS/AWS IAM and AWS CLI/AWS IAM and AWS CLI.md
+      
+      - Integration & Messaging:
+        - Integration Overview: CLOUD/AWS/AWS INTEGRATION & MESSAGING/0-AWS-INTEGRATION-AND-MESSAGING.md
+        - SQS: CLOUD/AWS/AWS INTEGRATION & MESSAGING/AWS-SQS.md
+        - SNS: CLOUD/AWS/AWS INTEGRATION & MESSAGING/AWS SNS.md
+        - Kinesis Data Streams: CLOUD/AWS/AWS INTEGRATION & MESSAGING/AWS-Kinesis-Data-Streams.md
+        - Kinesis Data Firehose: CLOUD/AWS/AWS INTEGRATION & MESSAGING/AWS-Kinesis-Data-Firehose.md
+        - Active MQ: CLOUD/AWS/AWS INTEGRATION & MESSAGING/AWS-Active-MQ.md
+      
+      - Machine Learning:
+        - ML Overview: CLOUD/AWS/AWS-MACHINE-LEARNING/0-AWS-MACHINE-LEARNING.md
+        - Bedrock: CLOUD/AWS/AWS-MACHINE-LEARNING/Amazon-Bedrock.md
+        - SageMaker: CLOUD/AWS/AWS-MACHINE-LEARNING/Amazon-SageMaker.md
+        - Comprehend: CLOUD/AWS/AWS-MACHINE-LEARNING/Amazon-Comprehend.md
+        - Comprehend Medical: CLOUD/AWS/AWS-MACHINE-LEARNING/Amazon-Comprehend-Medical.md
+        - Forecast: CLOUD/AWS/AWS-MACHINE-LEARNING/Amazon-Forecast.md
+        - Kendra: CLOUD/AWS/AWS-MACHINE-LEARNING/Amazon-Kendra.md
+        - Lex & Connect: CLOUD/AWS/AWS-MACHINE-LEARNING/Amazon-Lex-Connect.md
+        - Personalize: CLOUD/AWS/AWS-MACHINE-LEARNING/Amazon-Personalize.md
+        - Polly: CLOUD/AWS/AWS-MACHINE-LEARNING/Amazon-Polly.md
+        - Rekognition: CLOUD/AWS/AWS-MACHINE-LEARNING/Amazon-Rekognition.md
+        - Textract: CLOUD/AWS/AWS-MACHINE-LEARNING/Amazon-Textract.md
+        - Transcribe: CLOUD/AWS/AWS-MACHINE-LEARNING/Amazon-Transcribe.md
+        - Translate: CLOUD/AWS/AWS-MACHINE-LEARNING/Amazon-Translate.md
+      
+      - Monitoring & Audit:
+        - Monitoring Overview: CLOUD/AWS/AWS MONITORING AND AUDIT/0-Monitoring-and-audit.md
+        - CloudWatch vs CloudTrail vs Config: CLOUD/AWS/AWS MONITORING AND AUDIT/CloudWatch-vs-CloudTrail-vs-Config.md
+        - CloudWatch:
+          - CloudWatch: CLOUD/AWS/AWS MONITORING AND AUDIT/AWS-CLOUDWATCH/AWS-CloudWatch.md
+          - CloudWatch Logs: CLOUD/AWS/AWS MONITORING AND AUDIT/AWS-CLOUDWATCH/Cloudwatch-logs.md
+          - CloudWatch Alarms: CLOUD/AWS/AWS MONITORING AND AUDIT/AWS-CLOUDWATCH/CloudWatch-Alarms.md
+          - CloudWatch Agents: CLOUD/AWS/AWS MONITORING AND AUDIT/AWS-CLOUDWATCH/CloudWatch-Agents.md
+          - Application Insights: CLOUD/AWS/AWS MONITORING AND AUDIT/AWS-CLOUDWATCH/CloudWatch-Application-Insights.md
+          - Container Insights: CLOUD/AWS/AWS MONITORING AND AUDIT/AWS-CLOUDWATCH/CloudWatch-Container-Insights.md
+          - Contributor Insights: CLOUD/AWS/AWS MONITORING AND AUDIT/AWS-CLOUDWATCH/CloudWatch-Contributor-Insights.md
+          - Lambda Insights: CLOUD/AWS/AWS MONITORING AND AUDIT/AWS-CLOUDWATCH/CloudWatch-Lambda-Insights.md
+        - CloudTrail:
+          - CloudTrail: CLOUD/AWS/AWS MONITORING AND AUDIT/AWS CLOUDTRAIL/AWS CloudTrail.md
+          - EventBridge Integration: CLOUD/AWS/AWS MONITORING AND AUDIT/AWS CLOUDTRAIL/AWS Cloudtrail Event bridge integration.md
+        - Config:
+          - AWS Config: CLOUD/AWS/AWS MONITORING AND AUDIT/AWS CONFIG/AWS-Config.md
+        - EventBridge:
+          - EventBridge: CLOUD/AWS/AWS MONITORING AND AUDIT/AWS EVENT BRIDGE/AWS-EVENT-BRIGDE.md
+
+      - S3:
+        - S3 Overview: CLOUD/AWS/AWS S3/0-AWS-S3.md
+        - S3 Fundamentals: CLOUD/AWS/AWS S3/S3-Fundamentals.md
+        - S3 Encryption: CLOUD/AWS/AWS S3/S3-Encryption.md
+        - S3 Storage Class: CLOUD/AWS/AWS S3/S3-Storage-Class.md
+        - S3 Replication: CLOUD/AWS/AWS S3/S3-Replication.md
+        - Lifecycle Rules: CLOUD/AWS/AWS S3/Lifecycle-rules.md
+        - Event Notifications: CLOUD/AWS/AWS S3/Event-Notifications.md
+        - Pre-signed URLs: CLOUD/AWS/AWS S3/pre-signed-URLs.md
+        - CORS: CLOUD/AWS/AWS S3/CORS.md
+        - Access Point & Object Lambda: CLOUD/AWS/AWS S3/Access-Point-and-Object-Lambda.md
+        - Batch Operation: CLOUD/AWS/AWS S3/Batch-Operation.md
+        - Requester Pays: CLOUD/AWS/AWS S3/Requester-Pays.md
+        - Storage Lens: CLOUD/AWS/AWS S3/Storage-Lens.md
+      
+      - Security:
+        - Security Overview: CLOUD/AWS/AWS SECURITY/0-AWS-SECURITY-AND-ENCRYPTION.md
+        - KMS: CLOUD/AWS/AWS SECURITY/AWS-KMS.md
+        - Secrets Manager: CLOUD/AWS/AWS SECURITY/AWS Secrets Manager.md
+        - Certificate Manager: CLOUD/AWS/AWS SECURITY/AWS Certificate Manager.md
+        - Cognito: CLOUD/AWS/AWS SECURITY/AWS Cognito.md
+        - Config: CLOUD/AWS/AWS SECURITY/AWS Config.md
+        - GuardDuty: CLOUD/AWS/AWS SECURITY/AWS GuardDuty.md
+        - Inspector: CLOUD/AWS/AWS SECURITY/AWS Inspector.md
+        - Detective: CLOUD/AWS/AWS SECURITY/AWS Detective.md
+        - Macie: CLOUD/AWS/AWS SECURITY/Amazon Macie.md
+        - Security Hub: CLOUD/AWS/AWS SECURITY/AWS-SECURITY-HUB.md
+        - WAF: CLOUD/AWS/AWS SECURITY/AWS WAF.md
+        - Shield: CLOUD/AWS/AWS SECURITY/AWS Shield.md
+        - Firewall Manager: CLOUD/AWS/AWS SECURITY/AWS Firewall Manager.md
+        - Systems Manager:
+          - Systems Manager: CLOUD/AWS/AWS SECURITY/AWS Systems Manager/AWS Systems Manager.md
+          - Application Tools: CLOUD/AWS/AWS SECURITY/AWS Systems Manager/Application Tools.md
+          - Change Management: CLOUD/AWS/AWS SECURITY/AWS Systems Manager/Change Management Tools.md
+          - Node Tools: CLOUD/AWS/AWS SECURITY/AWS Systems Manager/Node Tools.md
+          - Operations Tools: CLOUD/AWS/AWS SECURITY/AWS Systems Manager/Operations Tools.md
+      
+      - Serverless:
+        - Serverless Overview: CLOUD/AWS/AWS SERVERLESS/0-AWS-SERVERLESS.md
+        - Lambda: CLOUD/AWS/AWS SERVERLESS/AWS-LAMBDA.md
+        - API Gateway: CLOUD/AWS/AWS SERVERLESS/AWS-API-GATEWAY.md
+        - DynamoDB: CLOUD/AWS/AWS SERVERLESS/AWS-DynamoDB.md
+        - Cognito: CLOUD/AWS/AWS SERVERLESS/AWS-Cognito.md
+        - Step Functions: CLOUD/AWS/AWS SERVERLESS/AWS-STEP-FUNCTIONS.md
+      
+      - Storage Extras:
+        - Storage Extras Overview: CLOUD/AWS/AWS STORAGE EXTRAS/0-AWS-STORAGE-EXTRAS.md
+        - Snow Family: CLOUD/AWS/AWS STORAGE EXTRAS/AWS-Snow-Family.md
+        - Storage Gateway: CLOUD/AWS/AWS STORAGE EXTRAS/AWS-Storage-Gateway.md
+        - FSx: CLOUD/AWS/AWS STORAGE EXTRAS/AWS-FSx.md
+        - DataSync: CLOUD/AWS/AWS STORAGE EXTRAS/AWS-DataSync.md
+        - Transfer Family: CLOUD/AWS/AWS STORAGE EXTRAS/AWS-Transfer-Family.md
+
+      - VPC Networking:
+        - VPC Overview: CLOUD/AWS/AWS VPC NETWORKING/0-AWS-VPC-NETWORKING.md
+        - CIDR IPv4: CLOUD/AWS/AWS VPC NETWORKING/CIDR-IPV4.md
+        - Default VPC: CLOUD/AWS/AWS VPC NETWORKING/Default-VPC.md
+        - Subnets: CLOUD/AWS/AWS VPC NETWORKING/Subnets.md
+        - Internet Gateway: CLOUD/AWS/AWS VPC NETWORKING/Internet-Gateway.md
+        - NAT Gateway: CLOUD/AWS/AWS VPC NETWORKING/NAT-Gateway.md
+        - Bastion Host: CLOUD/AWS/AWS VPC NETWORKING/Bastion-Host.md
+        - NACL & Security Groups: CLOUD/AWS/AWS VPC NETWORKING/NACL-Security-groups.md
+        - VPC Peering: CLOUD/AWS/AWS VPC NETWORKING/VPC-Peering.md
+        - VPC Endpoint: CLOUD/AWS/AWS VPC NETWORKING/VPC-Endpoint.md
+        - VPC Flow Logs: CLOUD/AWS/AWS VPC NETWORKING/VPC-Flow-logs.md
+        - Site-to-Site VPN: CLOUD/AWS/AWS VPC NETWORKING/Site-to-site-VPN.md
+        - Direct Connect: CLOUD/AWS/AWS VPC NETWORKING/Direct-Connect.md
+        - Transit Gateway: CLOUD/AWS/AWS VPC NETWORKING/Transit-Gateway.md
+        - Network Firewall: CLOUD/AWS/AWS VPC NETWORKING/Network-Firewall.md
+      
+      - Disaster Recovery & Migrations:
+        - DR & Migrations Overview: CLOUD/AWS/Disaster Recovery & Migrations/0-Disaster-Recovery-&-Migrations.md
+        - AWS Backup: CLOUD/AWS/Disaster Recovery & Migrations/AWS-Backup.md
+        - DMS: CLOUD/AWS/Disaster Recovery & Migrations/AWS-DMS.md
+        - Application Discovery Service: CLOUD/AWS/Disaster Recovery & Migrations/AWS-Application-Discovery-Service.md
+        - Application Migration Service: CLOUD/AWS/Disaster Recovery & Migrations/AWS-Application-Migration-Service.md
+        - VMC on AWS: CLOUD/AWS/Disaster Recovery & Migrations/VMC-on-AWS.md
+      
+      - Scalability & High Availability:
+        - Scalability & HA: CLOUD/AWS/Scalability and High Availability/Scalability and High Availability.md
+      
+      - Other Services:
+        - Other Services Overview: CLOUD/AWS/Other Services/0-Other-Services.md
+        - CloudFormation: CLOUD/AWS/Other Services/AWS-CloudFormation.md
+        - Amplify: CLOUD/AWS/Other Services/AWS-Amplify.md
+        - AppFlow: CLOUD/AWS/Other Services/AWS-AppFlow.md
+        - Batch: CLOUD/AWS/Other Services/AWS-Batch.md
+        - SES: CLOUD/AWS/Other Services/AWS-SES.md
+        - Pinpoint: CLOUD/AWS/Other Services/Amazon-Pinpoint.md
+        - Cost Explorer: CLOUD/AWS/Other Services/AWS-Cost-Explorer.md
+        - Cost Anomaly Detection: CLOUD/AWS/Other Services/AWS-Cost-Anomaly-Detection.md
+      
+      - Interview Questions:
+        - AWS Interview Q&A: CLOUD/AWS/AWS Interview questions with Answers/AWS Interview questions with Answers.md
+
+    - Azure:
+      - Overview: CLOUD/AZURE/README.md
+      - Azure Cloud Topics: CLOUD/AZURE/0-AZURE-CLOUD-TOPICS.md
+      - Azure Services: CLOUD/AZURE/0-AZURE-SERVICE-cleaned.md
+      - Azure .NET Roadmap: CLOUD/AZURE/AZURE-DOTNET-ROADMAP.md
+      - Learning Architecture: CLOUD/AZURE/Azure-Learning-Architecture-Task-Based.md
+      
+      - Docs:
+        - Resource Groups:
+          - Resource Groups: CLOUD/AZURE/Docs/1-Resource-groups/1-Resource-groups.md
+        - IAM & Security:
+          - Microsoft Entra ID: CLOUD/AZURE/Docs/2-IAM-Security/2-microsoft-entra-id.md
+          - Creating & Assigning Users: CLOUD/AZURE/Docs/2-IAM-Security/2.1-creating-and-assigning-users.md
+          - Azure Key Vault: CLOUD/AZURE/Docs/2-IAM-Security/2.2-azure-key-vault.md
+        - CLI:
+          - Azure CLI: CLOUD/AZURE/Docs/3-CLI/3-azure-cli.md
+        - PaaS:
+          - Static Web Apps: CLOUD/AZURE/Docs/4-PaaS/4-azure-static-web-apps.md
+          - Web App Service: CLOUD/AZURE/Docs/4-PaaS/4.2-azure web-app-service.md
+        - Databases:
+          - PostgreSQL Database: CLOUD/AZURE/Docs/5-DB/5.1-azure-postgresql-database.md
+          - PostgreSQL Flow: CLOUD/AZURE/Docs/5-DB/5.2-azure-postgresql-flow.md
+          - CosmosDB: CLOUD/AZURE/Docs/5-DB/5.3-azure-cosmosdb.md
+        - Storage:
+          - Storage Account: CLOUD/AZURE/Docs/6-Storage/6.1-azure-storage-account.md
+          - Blob Storage: CLOUD/AZURE/Docs/6-Storage/6.2-azure -blob-storage.md
+          - Files Shares: CLOUD/AZURE/Docs/6-Storage/6.3-azure-files-shares.md
+        - Networking:
+          - VNet: CLOUD/AZURE/Docs/7-Networking/7-azure-vnet.md
+          - NAT Gateway: CLOUD/AZURE/Docs/7-Networking/7.1-azure-nat-gateway.md
+          - Firewall: CLOUD/AZURE/Docs/7-Networking/7.2-azure-firewall.md
+          - Bastion: CLOUD/AZURE/Docs/7-Networking/7.3-azure-bastion.md
+          - VNet Peering: CLOUD/AZURE/Docs/7-Networking/7.4-azure-vnet-peering.md
+          - Private Endpoints: CLOUD/AZURE/Docs/7-Networking/7.5-azure-private-endpoints.md
+          - VNet Hub & Spoke: CLOUD/AZURE/Docs/7-Networking/7.6-azure-vnet-hub-&-spoke.md
+          - S2S VPN Gateway: CLOUD/AZURE/Docs/7-Networking/7.7-azure-s2s-vpn-gateway.md
+          - P2S VPN Gateway: CLOUD/AZURE/Docs/7-Networking/7.8-azure-p2s-vpn-gateway.md
+        - Virtual Machines:
+          - Azure VM: CLOUD/AZURE/Docs/8-Virtual-Machines/8-azure-vm.md
+          - App Gateway: CLOUD/AZURE/Docs/8-Virtual-Machines/8.1-azure-app-gateway.md
+      
+      - Services:
+        - Static Web Apps:
+          - Static Web Apps Tutorial: CLOUD/AZURE/SERVICES/AZURE-STATIC-WEB-APP/🚀 Azure Static Web Apps – Full End-to-End Tutorial.md
+        - Web App Service:
+          - App Service Tutorial: CLOUD/AZURE/SERVICES/AZURE-WEB-APP-SERVICE/🚀 Azure App Service – End-to-End Tutorial (All Tech Stacks).md
+        - Virtual Machines:
+          - Azure VMs: CLOUD/AZURE/SERVICES/AZURE VM/0-Azure-VMs.md
+          - VMSS: CLOUD/AZURE/SERVICES/AZURE VM/1-Azure-VMSS.md
+          - Load Balancer: CLOUD/AZURE/SERVICES/AZURE VM/2-Azure-Load-Balancer.md
+          - Terraform for VMSS & LB: CLOUD/AZURE/SERVICES/AZURE VM/3-terraform-for-vmss-lb.md
+        - Microsoft Entra ID:
+          - Overview: CLOUD/AZURE/SERVICES/MICROSOFT-INTRA-ID/0-Microsoft-Entra-ID-(formerly Azure AD).md
+          - Users: CLOUD/AZURE/SERVICES/MICROSOFT-INTRA-ID/1-Users.md
+          - Groups: CLOUD/AZURE/SERVICES/MICROSOFT-INTRA-ID/2-Groups.md
+          - Roles: CLOUD/AZURE/SERVICES/MICROSOFT-INTRA-ID/3-Roles.md
+          - Service Principals: CLOUD/AZURE/SERVICES/MICROSOFT-INTRA-ID/3a-Service-principals.md
+          - Managed Identities: CLOUD/AZURE/SERVICES/MICROSOFT-INTRA-ID/3b-managed-identities.md
+          - Service Principals vs Managed Identities: CLOUD/AZURE/SERVICES/MICROSOFT-INTRA-ID/3c-service-principals-vs-managed-identities.md
+          - Auth with Azure AD: CLOUD/AZURE/SERVICES/MICROSOFT-INTRA-ID/4-Auth-with-Azure-AD.md
+          - Auth with Terraform: CLOUD/AZURE/SERVICES/MICROSOFT-INTRA-ID/5-Auth-with-Azure-Terraform.md
+        - Networking Services:
+          - VNet: CLOUD/AZURE/SERVICES/Networking Services/Azure-VNet.md
+          - NSG: CLOUD/AZURE/SERVICES/Networking Services/NSG.md
+          - ASG: CLOUD/AZURE/SERVICES/Networking Services/ASG.md
+          - Load Balancer: CLOUD/AZURE/SERVICES/Networking Services/Azure-Load-Balancer.md
+          - Application Gateway & WAF: CLOUD/AZURE/SERVICES/Networking Services/Azure-Application-Gateway-WAF.md
+          - Firewall: CLOUD/AZURE/SERVICES/Networking Services/Azure-Firewall.md
+          - VPN Gateway: CLOUD/AZURE/SERVICES/Networking Services/Azure-VPN-Gateway.md
+          - VNet Peering: CLOUD/AZURE/SERVICES/Networking Services/VNet-Peering.md
+          - DNS: CLOUD/AZURE/SERVICES/Networking Services/Azure-DNS.md
+        - Resource Groups:
+          - Resource Groups: CLOUD/AZURE/SERVICES/RESOURCE-GROUPS/0-resource-groups.md
+          - Azure Resource Manager: CLOUD/AZURE/SERVICES/RESOURCE-GROUPS/1-Azure-Resource-Manager.md
+        - Hybrid & Multicloud:
+          - Azure Arc: CLOUD/AZURE/SERVICES/Hybrid & Multicloud/Azure-Arc.md
+          - Azure Lighthouse: CLOUD/AZURE/SERVICES/Hybrid & Multicloud/Azure-Lighthouse.md
+
   - Cybersecurity:
     - Basics: CYBERSECURITY/Basics of Cybersecurity.md
-    - Fundamentals: CYBERSECURITY/FUNDAMENTALS/Concepts roadmap.md
-    - SOC: CYBERSECURITY/SOC/Security Operations Center (SOC).md
-    - Tools: CYBERSECURITY/TOOLS/Cyber security tools.md
-  
+    
+    - Fundamentals:
+      - Concepts Roadmap: CYBERSECURITY/FUNDAMENTALS/Concepts roadmap.md
+      - Cybersecurity Terms: CYBERSECURITY/FUNDAMENTALS/Cybersecurity Terms.md
+      
+      - Core Concepts:
+        - CIA Triad: CYBERSECURITY/FUNDAMENTALS/CYBERSECURITY FUNDAMENTALS CONCEPTS/1.1-CIA triad.md
+        - AAA Model: CYBERSECURITY/FUNDAMENTALS/CYBERSECURITY FUNDAMENTALS CONCEPTS/1.2-AAA-MODEL.md
+        - Least Privilege: CYBERSECURITY/FUNDAMENTALS/CYBERSECURITY FUNDAMENTALS CONCEPTS/1.3-Least-Privilege.md
+        - Zero Trust: CYBERSECURITY/FUNDAMENTALS/CYBERSECURITY FUNDAMENTALS CONCEPTS/1.4-Zero-Trust.md
+        - Least Privilege vs Zero Trust: CYBERSECURITY/FUNDAMENTALS/CYBERSECURITY FUNDAMENTALS CONCEPTS/1.5-Least-Privilege-vs-Zero-Trust.md
+        - Defense In Depth: CYBERSECURITY/FUNDAMENTALS/CYBERSECURITY FUNDAMENTALS CONCEPTS/1.6-Defense-In-Depth-and-Security-Controls.md
+        - Social Engineering: CYBERSECURITY/FUNDAMENTALS/CYBERSECURITY FUNDAMENTALS CONCEPTS/1.7-Social-Engineering.md
+        - Malware: CYBERSECURITY/FUNDAMENTALS/CYBERSECURITY FUNDAMENTALS CONCEPTS/1.8-Malware.md
+        - Network Attacks: CYBERSECURITY/FUNDAMENTALS/CYBERSECURITY FUNDAMENTALS CONCEPTS/1.9-Network-Attacks.md
+        - Web Attacks:
+          - Web Attacks Overview: CYBERSECURITY/FUNDAMENTALS/CYBERSECURITY FUNDAMENTALS CONCEPTS/1.10-Web-Attacks.md
+          - SQL Injection: CYBERSECURITY/FUNDAMENTALS/CYBERSECURITY FUNDAMENTALS CONCEPTS/1.10.1-Sql-Injection.md
+          - Cross-Site Scripting: CYBERSECURITY/FUNDAMENTALS/CYBERSECURITY FUNDAMENTALS CONCEPTS/1.10.2-Cross-Sites-Scripting.md
+          - CSRF: CYBERSECURITY/FUNDAMENTALS/CYBERSECURITY FUNDAMENTALS CONCEPTS/1.10.3-Cross-Site-Request-Forgery.md
+          - SSRF: CYBERSECURITY/FUNDAMENTALS/CYBERSECURITY FUNDAMENTALS CONCEPTS/1.10.4-Server-Side-Request-Forgery.md
+        - DoS & DDoS: CYBERSECURITY/FUNDAMENTALS/CYBERSECURITY FUNDAMENTALS CONCEPTS/1.11-Dos-and-Ddos-Attacks.md
+        - NIST Framework: CYBERSECURITY/FUNDAMENTALS/CYBERSECURITY FUNDAMENTALS CONCEPTS/2.1-NIST-Framework-CSF-2.0.md
+      
+      - Networking Basics:
+        - Networking Structure: CYBERSECURITY/FUNDAMENTALS/NETWORKING BASICS FROM HACK THE BOX/01-Networking Structure.md
+        - Networking Workflow: CYBERSECURITY/FUNDAMENTALS/NETWORKING BASICS FROM HACK THE BOX/02-Networking Workflow.md
+        - Network Addressing: CYBERSECURITY/FUNDAMENTALS/NETWORKING BASICS FROM HACK THE BOX/03-Network Addressing.md
+        - Protocols & Terminology: CYBERSECURITY/FUNDAMENTALS/NETWORKING BASICS FROM HACK THE BOX/04-Protocols & Terminology.md
+        - Connection Establishment: CYBERSECURITY/FUNDAMENTALS/NETWORKING BASICS FROM HACK THE BOX/05-Connection Establishment.md
+      
+      - Network Security:
+        - Firewalls: CYBERSECURITY/FUNDAMENTALS/NETWORK SECURITY/Firewalls.md
+        - Data Flow: CYBERSECURITY/FUNDAMENTALS/NETWORK SECURITY/DATA FLOW.md
+    
+    - SOC:
+      - Security Operations Center: CYBERSECURITY/SOC/Security Operations Center (SOC).md
+      - Cloud Services for SOC: CYBERSECURITY/SOC/Cloud Services for SOC Analyst.md
+    
+    - Honeypot Tools:
+      - Cowrie: CYBERSECURITY/HONEYPOT-TOOLS/Cowrie.md
+      - Suricata: CYBERSECURITY/HONEYPOT-TOOLS/Suricata.md
+    
+    - Tools:
+      - Cyber Security Tools: CYBERSECURITY/TOOLS/Cyber security tools.md
+      
+      - Networking & Security Analysis:
+        - Overview: CYBERSECURITY/TOOLS/Networking & Security Analysis/00-Networking & Security Analysis.md
+        - ping: CYBERSECURITY/TOOLS/Networking & Security Analysis/01-ping.md
+        - Traceroute & mtr: CYBERSECURITY/TOOLS/Networking & Security Analysis/02-Traceroute-and-mtr.md
+        - nslookup & dig: CYBERSECURITY/TOOLS/Networking & Security Analysis/03-nslookup-and-dig.md
+        - netstat: CYBERSECURITY/TOOLS/Networking & Security Analysis/04-netstat.md
+        - tcpdump: CYBERSECURITY/TOOLS/Networking & Security Analysis/05-tcpdump.md
+        - Wireshark: CYBERSECURITY/TOOLS/Networking & Security Analysis/06-wireshark.md
+        - Nmap: CYBERSECURITY/TOOLS/Networking & Security Analysis/07-Nmap.md
+      
+      - Operating Systems:
+        - Linux Fundamentals: CYBERSECURITY/TOOLS/Operating systems/1.1-linux-fundamentals-overview.md
+        - Windows Fundamentals Overview: CYBERSECURITY/TOOLS/Operating systems/1.2-windows-fundamentals-overiew.md
+        - Windows Fundamentals: CYBERSECURITY/TOOLS/Operating systems/2-windows-fundamentals.md
+        - Active Directory: CYBERSECURITY/TOOLS/Operating systems/3-Active-Directory.md
+        - Kerberos: CYBERSECURITY/TOOLS/Operating systems/3.1-kerberos.md
+        - Linux Firewall: CYBERSECURITY/TOOLS/Operating systems/4.1-linux-firewall.md
+        - Windows Firewall: CYBERSECURITY/TOOLS/Operating systems/4.2-windows-firewall.md
+      
+      - Vulnerability Scanning:
+        - Trivy Scan: CYBERSECURITY/TOOLS/vulnerability Scanning/1-Trivy-scan.md
+        - Snyk Scan: CYBERSECURITY/TOOLS/vulnerability Scanning/2-snyk-scan.md
+        - Trivy vs Snyk: CYBERSECURITY/TOOLS/vulnerability Scanning/3-diff-btw-trivy-&-snyk.md
+        - OpenVAS: CYBERSECURITY/TOOLS/vulnerability Scanning/4-OpenVAS.md
+        - Nikto: CYBERSECURITY/TOOLS/vulnerability Scanning/5-nikto-vuln-scan.md
+        - OWASP ZAP: CYBERSECURITY/TOOLS/vulnerability Scanning/6-OWASP ZAP.md
+        - Metasploit: CYBERSECURITY/TOOLS/vulnerability Scanning/7-Metasploit Framework.md
+        - Burp Suite: CYBERSECURITY/TOOLS/vulnerability Scanning/8-Burp Suite.md
+
   - Development:
-    - MERN Stack: DEVELOPMENT/1-MERN/1-JAVASCRIPT-BASICS.md
-    - Go Lang: DEVELOPMENT/2-Golang/README.md
+    
+    - MERN Stack:
+      - JavaScript Basics: DEVELOPMENT/1-MERN/1-JAVASCRIPT-BASICS.md
+      - JavaScript Advanced: DEVELOPMENT/1-MERN/2-JAVASCRIPT-ADVANCED.md
+      - MongoDB: DEVELOPMENT/1-MERN/3-MONGODB.md
+      - ExpressJS & NodeJS: DEVELOPMENT/1-MERN/4-EXPRESSJS-NODEJS.md
+      - ReactJS: DEVELOPMENT/1-MERN/5-REACTJS.md
+      - HTML & CSS for ReactJS: DEVELOPMENT/1-MERN/6-HTML,CSS-FOR-REACTJS.md
+    
+    - Go Lang:
+      - Overview: DEVELOPMENT/2-Golang/README.md
+      - Golang Guide: DEVELOPMENT/2-Golang/golang.md
+      - Installation:
+        - Installation Guide: DEVELOPMENT/2-Golang/INSTALLATION/README.md
+        - Profile Setup: DEVELOPMENT/2-Golang/INSTALLATION/profile.md
   
   - GenAI:
-    - MLflow: GENAI/1-mlflow/1-MLFLOW.md
+    - MLflow:
+      - MLflow Overview: GENAI/1-mlflow/1-MLFLOW.md
+      - MLflow Tutorial: GENAI/1-mlflow/2-MLflow-tutorial.md

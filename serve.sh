@@ -11,5 +11,6 @@ echo ""
 echo "Press Ctrl+C to stop the server"
 echo ""
 
-# Start the development server
-mkdocs serve --config-file .mkdocs/mkdocs.yml
+# Change to docs-site directory and serve
+cd docs-site
+mkdocs serve
