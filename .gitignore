@@ -1,0 +1,81 @@
+# MkDocs
+site/
+.cache/
+.mkdocs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.venv/
+*.egg-info/
+
+# Node
+node_modules/
+package-lock.json
+yarn.lock
+
+# Backup files
+*.backup
+*.bak
+*~
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+*.tf
+*.tfvars
+*.hcl
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+progress.txt
+output.txt
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Obsidian
+.obsidian/
+
+# Java
+*.class
+*.jar
+*.war
+pom.xml
+*.gradle
+
+# Ansible
+*.ini
+*.yaml
+!mkdocs.yml
+!docker-compose*.yml
+!otel-collector.yaml
+
+# Packer
+*.pkr.hcl
+
+# Config files
+*.json
+!package.json
+
+# Build artifacts
+dist/
+build/
+target/
