@@ -1,0 +1,152 @@
+site_name: DevOps & Cloud Documentation
+site_description: Comprehensive DevOps, Cloud, and System Design documentation
+site_author: Yuva
+site_url: https://yuva19102003.github.io/Docs
+
+repo_name: yuva19102003/Docs
+repo_url: https://github.com/yuva19102003/Docs
+edit_uri: edit/main/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep purple
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+    - navigation.footer
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    repo: fontawesome/brands/github
+
+docs_dir: ..
+site_dir: ../../site
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search:
+      lang: en
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - attr_list
+  - md_in_html
+  - def_list
+
+exclude_docs: |
+  **/node_modules/
+  **/.git/
+  **/__pycache__/
+  **/*.pyc
+  venv/
+  .venv/
+  site/
+  .mkdocs/
+  .gitignore
+  mkdocs.yml
+  mkdocs.yml.backup
+  requirements.txt
+  generate_nav.py
+  build.sh
+  serve.sh
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yuva19102003
+      name: GitHub Profile
+    - icon: fontawesome/brands/github
+      link: https://github.com/yuva19102003/Docs
+      name: View Repository
+  generator: false
+
+copyright: |
+  <div style="display: flex; justify-content: center; align-items: center; width: 100%; padding: 20px 0;">
+    <div style="text-align: center; max-width: 800px;">
+      <p style="margin: 0 0 10px 0; font-size: 1.1em;">
+        <strong>DevOps & Cloud Documentation</strong>
+      </p>
+      <p style="margin: 0 0 10px 0; font-size: 1em;">
+        Made with ❤️ by <a href="https://github.com/yuva19102003" target="_blank" rel="noopener" style="color: #9c27b0; text-decoration: none; font-weight: 500;">Yuva</a>
+      </p>
+      <p style="margin: 0; font-size: 0.9em; color: #666;">
+        © 2026 All rights reserved | 
+        <a href="https://github.com/yuva19102003/Docs" target="_blank" rel="noopener" style="color: #2196f3; text-decoration: none;">Repository</a> | 
+        <a href="https://github.com/yuva19102003/Docs/blob/main/LICENSE" target="_blank" rel="noopener" style="color: #2196f3; text-decoration: none;">License</a>
+      </p>
+    </div>
+  </div>
+
+nav:
+  - Home: index.md
+  
+  - DevOps Core:
+    - DEVOPS-CORE/README.md
+    - DevOps Topics: DEVOPS-CORE/01-DEVOPS-TOPICS/DevOps Topics.md
+    - Operating System:
+      - Linux: DEVOPS-CORE/02-OPERATING-SYSTEM/Linux/README.md
+    - Git: DEVOPS-CORE/03-GIT/README.md
+    - Networking: DEVOPS-CORE/04-NETWORKING/README.md
+    - Containerization: DEVOPS-CORE/05-CONTAINERIZATION/README.md
+    - CI/CD: DEVOPS-CORE/06-CICD/README.md
+    - Deployment Strategies: DEVOPS-CORE/07-DEPLOYMENT-STRATEGIES/README.md
+    - Infrastructure as Code: DEVOPS-CORE/08-IAC/Terraform/README.md
+    - Configuration Management: DEVOPS-CORE/09-CONFIG-MANAGEMENT/Ansible/README.md
+    - Message Queues: DEVOPS-CORE/10-MESSAGE-QUEUES/Apache-Kafka/apache-kafka.md
+    - NGINX: DEVOPS-CORE/11-NGINX/0-NGINX-Overview.md
+    - Observability: DEVOPS-CORE/12-OBSERVABILITY/README.md
+    - Caching: DEVOPS-CORE/13-CACHING/README.md
+    - Secrets Management: DEVOPS-CORE/14-SECRETS-MANAGEMENT/Hashicorp-Vault/README.md
+    - System Design: DEVOPS-CORE/15-SYSTEM-DESIGN/README.md
+    - Interview Questions: DEVOPS-CORE/16-INTERVIEW-QUESTIONS/README.md
+  
+  - Cloud Platforms:
+    - AWS: CLOUD/AWS/0-AWS-SERVICES.md
+    - Azure: CLOUD/AZURE/README.md
+  
+  - Cybersecurity:
+    - Basics: CYBERSECURITY/Basics of Cybersecurity.md
+    - Fundamentals: CYBERSECURITY/FUNDAMENTALS/Concepts roadmap.md
+    - SOC: CYBERSECURITY/SOC/Security Operations Center (SOC).md
+    - Tools: CYBERSECURITY/TOOLS/Cyber security tools.md
+  
+  - Development:
+    - MERN Stack: DEVELOPMENT/1-MERN/1-JAVASCRIPT-BASICS.md
+    - Go Lang: DEVELOPMENT/2-Golang/README.md
+  
+  - GenAI:
+    - MLflow: GENAI/1-mlflow/1-MLFLOW.md
