@@ -536,7 +536,23 @@ nav:
         - Virtual Machines:
           - Azure VM: CLOUD/AZURE/Docs/8-Virtual-Machines/8-azure-vm.md
           - App Gateway: CLOUD/AZURE/Docs/8-Virtual-Machines/8.1-azure-app-gateway.md
-      
+        - Load Balancing:
+          - Azure Load Balancer: CLOUD/AZURE/Docs/9-Load-Balancing/9.1-azure-load-balancer.md
+          - Health Probe: CLOUD/AZURE/Docs/9-Load-Balancing/9.2-configure-health-probe.md
+          - Azure Application Gateway: CLOUD/AZURE/Docs/9-Load-Balancing/9.3-Azure-Application-Gateway.md
+          - Azure Traffic Manager: CLOUD/AZURE/Docs/9-Load-Balancing/9.4-Azure-Traffic-Manager.md
+          - Azure Front Door: CLOUD/AZURE/Docs/9-Load-Balancing/9.5-Azure-Front-Door.md
+        - Vnet-VM's-LB:
+          - Overview: CLOUD/AZURE/Docs/10-vnet-vm-lb/10.0-Overview.md
+          - Resource Group Setup: CLOUD/AZURE/Docs/10-vnet-vm-lb/10.1-Resource-Group-Setup.md
+          - VNet Setup: CLOUD/AZURE/Docs/10-vnet-vm-lb/10.2-Virtual-Network-Setup.md
+          - Network Interface: CLOUD/AZURE/Docs/10-vnet-vm-lb/10.3-Network-Interfaces.md
+          - VM's: CLOUD/AZURE/Docs/10-vnet-vm-lb/10.4-Virtual-Machines-Setup.md
+          - Load Balancer Setup: CLOUD/AZURE/Docs/10-vnet-vm-lb/10.5-Load-Balancer-Setup.md
+          - VM-Extension: CLOUD/AZURE/Docs/10-vnet-vm-lb/10.6-VM-Extensions.md
+          - Terraform Vars:  CLOUD/AZURE/Docs/10-vnet-vm-lb/10.7-Terraform-Variables.md
+          - Output: CLOUD/AZURE/Docs/10-vnet-vm-lb/10.8-Outputs.md
+          - Deployment-Guide: CLOUD/AZURE/Docs/10-vnet-vm-lb/10.9-Deployment-Guide.md
       - Services:
         - Static Web Apps:
           - Static Web Apps Tutorial: CLOUD/AZURE/SERVICES/AZURE-STATIC-WEB-APP/🚀 Azure Static Web Apps – Full End-to-End Tutorial.md
