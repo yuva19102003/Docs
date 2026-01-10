@@ -496,6 +496,24 @@ nav:
       - Interview Questions:
         - AWS Interview Q&A: CLOUD/AWS/AWS Interview questions with Answers/AWS Interview questions with Answers.md
 
+    - DigitalOcean:
+      - Droplets:
+        - Overview: CLOUD/DIGITAL-OCEAN/DROPLETS/README.md
+        - Droplets Overview: CLOUD/DIGITAL-OCEAN/DROPLETS/0-DROPLETS-OVERVIEW.md
+        - Creating Droplets: CLOUD/DIGITAL-OCEAN/DROPLETS/1-CREATING-DROPLETS.md
+        - Managing Droplets: CLOUD/DIGITAL-OCEAN/DROPLETS/2-MANAGING-DROPLETS.md
+      
+      - Networking:
+        - Overview: CLOUD/DIGITAL-OCEAN/NETWORKING/README.md
+        - Networking Overview: CLOUD/DIGITAL-OCEAN/NETWORKING/0-NETWORKING-OVERVIEW.md
+        - Domains & DNS: CLOUD/DIGITAL-OCEAN/NETWORKING/1-DOMAINS-DNS.md
+        - Reserved IPs: CLOUD/DIGITAL-OCEAN/NETWORKING/2-RESERVED-IPS.md
+        - Load Balancers: CLOUD/DIGITAL-OCEAN/NETWORKING/3-LOAD-BALANCERS.md
+        - VPC: CLOUD/DIGITAL-OCEAN/NETWORKING/4-VPC.md
+        - Cloud Firewalls: CLOUD/DIGITAL-OCEAN/NETWORKING/5-CLOUD-FIREWALLS.md
+        - PTR Records: CLOUD/DIGITAL-OCEAN/NETWORKING/6-PTR-RECORDS.md
+        - Multi-Cloud Integration: CLOUD/DIGITAL-OCEAN/NETWORKING/7-MULTI-CLOUD-INTEGRATION.md
+
     - Azure:
       - Overview: CLOUD/AZURE/README.md
       - Azure Cloud Topics: CLOUD/AZURE/0-AZURE-CLOUD-TOPICS.md
