@@ -503,6 +503,58 @@ nav:
         - Creating Droplets: CLOUD/DIGITAL-OCEAN/DROPLETS/1-CREATING-DROPLETS.md
         - Managing Droplets: CLOUD/DIGITAL-OCEAN/DROPLETS/2-MANAGING-DROPLETS.md
       
+      - GPU Droplets:
+        - Overview: CLOUD/DIGITAL-OCEAN/GPU-DROPLETS/README.md
+        - GPU Droplets Overview: CLOUD/DIGITAL-OCEAN/GPU-DROPLETS/0-GPU-DROPLETS-OVERVIEW.md
+      
+      - Kubernetes:
+        - Overview: CLOUD/DIGITAL-OCEAN/KUBERNETES/README.md
+        - Kubernetes Overview: CLOUD/DIGITAL-OCEAN/KUBERNETES/0-KUBERNETES-OVERVIEW.md
+      
+      - Volumes Block Storage:
+        - Overview: CLOUD/DIGITAL-OCEAN/VOLUMES-BLOCK-STORAGE/README.md
+        - Volumes Overview: CLOUD/DIGITAL-OCEAN/VOLUMES-BLOCK-STORAGE/0-VOLUMES-OVERVIEW.md
+      
+      - Databases:
+        - Overview: CLOUD/DIGITAL-OCEAN/DATABASES/README.md
+        - Databases Overview: CLOUD/DIGITAL-OCEAN/DATABASES/0-DATABASES-OVERVIEW.md
+      
+      - Container Registry:
+        - Overview: CLOUD/DIGITAL-OCEAN/CONTAINER-REGISTRY/README.md
+        - Container Registry Overview: CLOUD/DIGITAL-OCEAN/CONTAINER-REGISTRY/0-CONTAINER-REGISTRY-OVERVIEW.md
+      
+      - Backups & Snapshots:
+        - Overview: CLOUD/DIGITAL-OCEAN/BACKUPS-SNAPSHOTS/README.md
+        - Backups & Snapshots Overview: CLOUD/DIGITAL-OCEAN/BACKUPS-SNAPSHOTS/0-BACKUPS-SNAPSHOTS-OVERVIEW.md
+      
+      - Network File Storage:
+        - Overview: CLOUD/DIGITAL-OCEAN/NETWORK-FILE-STORAGE/README.md
+        - Network File Storage Overview: CLOUD/DIGITAL-OCEAN/NETWORK-FILE-STORAGE/0-NETWORK-FILE-STORAGE-OVERVIEW.md
+      
+      - Monitoring:
+        - Overview: CLOUD/DIGITAL-OCEAN/MONITORING/README.md
+        - Monitoring Overview: CLOUD/DIGITAL-OCEAN/MONITORING/0-MONITORING-OVERVIEW.md
+      
+      - App Platform:
+        - Overview: CLOUD/DIGITAL-OCEAN/APP-PLATFORM/README.md
+        - App Platform Overview: CLOUD/DIGITAL-OCEAN/APP-PLATFORM/0-APP-PLATFORM-OVERVIEW.md
+      
+      - Functions:
+        - Overview: CLOUD/DIGITAL-OCEAN/FUNCTIONS/README.md
+        - Functions Overview: CLOUD/DIGITAL-OCEAN/FUNCTIONS/0-FUNCTIONS-OVERVIEW.md
+      
+      - Spaces Object Storage:
+        - Overview: CLOUD/DIGITAL-OCEAN/SPACES-OBJECT-STORAGE/README.md
+        - Spaces Overview: CLOUD/DIGITAL-OCEAN/SPACES-OBJECT-STORAGE/0-SPACES-OVERVIEW.md
+      
+      - Agent Platform:
+        - Overview: CLOUD/DIGITAL-OCEAN/AGENT-PLATFORM/README.md
+        - Agent Platform Overview: CLOUD/DIGITAL-OCEAN/AGENT-PLATFORM/0-AGENT-PLATFORM-OVERVIEW.md
+      
+      - SaaS Add-Ons:
+        - Overview: CLOUD/DIGITAL-OCEAN/SAAS-ADD-ONS/README.md
+        - SaaS Add-Ons Overview: CLOUD/DIGITAL-OCEAN/SAAS-ADD-ONS/0-SAAS-ADD-ONS-OVERVIEW.md
+      
       - Networking:
         - Overview: CLOUD/DIGITAL-OCEAN/NETWORKING/README.md
         - Networking Overview: CLOUD/DIGITAL-OCEAN/NETWORKING/0-NETWORKING-OVERVIEW.md
