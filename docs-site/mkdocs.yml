@@ -749,7 +749,21 @@ nav:
     
     - Go Lang:
       - Overview: DEVELOPMENT/2-Golang/README.md
-      - Golang Guide: DEVELOPMENT/2-Golang/golang.md
+      - Golang Index: DEVELOPMENT/2-Golang/golang.md
+      - Getting Started:
+        - Project Setup: DEVELOPMENT/2-Golang/00-project-setup.md
+      - Core Concepts:
+        - Basics: DEVELOPMENT/2-Golang/01-basics.md
+        - Arrays & Slices: DEVELOPMENT/2-Golang/02-arrays-slices.md
+        - Functions: DEVELOPMENT/2-Golang/03-functions.md
+        - Structs: DEVELOPMENT/2-Golang/04-structs.md
+        - Maps: DEVELOPMENT/2-Golang/05-maps.md
+        - Pointers: DEVELOPMENT/2-Golang/06-pointers.md
+        - Methods & Interfaces: DEVELOPMENT/2-Golang/07-methods-interfaces.md
+        - Errors: DEVELOPMENT/2-Golang/08-errors.md
+        - Testing: DEVELOPMENT/2-Golang/09-testing.md
+        - Concurrency: DEVELOPMENT/2-Golang/10-concurrency.md
+        - Standard Library: DEVELOPMENT/2-Golang/11-packages.md
       - Installation:
         - Installation Guide: DEVELOPMENT/2-Golang/INSTALLATION/README.md
         - Profile Setup: DEVELOPMENT/2-Golang/INSTALLATION/profile.md
