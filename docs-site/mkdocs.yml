@@ -162,14 +162,39 @@ nav:
       - Overview: DEVOPS-CORE/06-CICD/README.md
       - CI/CD Fundamentals: DEVOPS-CORE/06-CICD/0-CICD-Fundamentals.md
       - Jenkins:
-        - Overview: DEVOPS-CORE/06-CICD/Jenkins/README.md
-        - Jenkins Guide: DEVOPS-CORE/06-CICD/Jenkins/Jenkins.md
+        - Overview: DEVOPS-CORE/06-CICD/Jenkins/Jenkins-Overview.md
+        - Installation: DEVOPS-CORE/06-CICD/Jenkins/Jenkins-Installation.md
+        - Pipelines: DEVOPS-CORE/06-CICD/Jenkins/Jenkins-Pipelines.md
+        - Agents: DEVOPS-CORE/06-CICD/Jenkins/Jenkins-Agents.md
+        - Plugins: DEVOPS-CORE/06-CICD/Jenkins/Jenkins-Plugins.md
+        - Examples: DEVOPS-CORE/06-CICD/Jenkins/Jenkins-Examples.md
+        - Legacy Guide: DEVOPS-CORE/06-CICD/Jenkins/Jenkins.md
         - Java Maven Project: DEVOPS-CORE/06-CICD/Jenkins/java-maven-sonar-argocd-helm-k8s/README.md
         - Spring Boot App: DEVOPS-CORE/06-CICD/Jenkins/java-maven-sonar-argocd-helm-k8s/spring-boot-app/README.md
-      - GitHub Actions: DEVOPS-CORE/06-CICD/GitHub-Actions/GitHub-Actions.md
-      - GitLab CI: DEVOPS-CORE/06-CICD/GitLab-CI/GitLab-CI.md
-      - Azure DevOps: DEVOPS-CORE/06-CICD/Azure-DevOps/Azure-DevOps.md
-      - ArgoCD: DEVOPS-CORE/06-CICD/ArgoCD/README.md
+      - GitHub Actions:
+        - Overview: DEVOPS-CORE/06-CICD/GitHub-Actions/GitHub-Actions.md
+        - Reusable Workflows: DEVOPS-CORE/06-CICD/GitHub-Actions/Reusable-Workflows.md
+        - Workflow Examples: DEVOPS-CORE/06-CICD/GitHub-Actions/Workflow-Examples.md
+        - Self-Hosted Runners:
+          - Server Setup: DEVOPS-CORE/06-CICD/GitHub-Actions/Self-Hosted-Runner-Server.md
+          - Docker Setup: DEVOPS-CORE/06-CICD/GitHub-Actions/Self-Hosted-Runner-Docker.md
+          - Kubernetes Setup: DEVOPS-CORE/06-CICD/GitHub-Actions/Self-Hosted-Runner-Kubernetes.md
+          - Advanced Setups: DEVOPS-CORE/06-CICD/GitHub-Actions/Self-Hosted-Runner-Advanced.md
+      - GitLab CI:
+        - Overview: DEVOPS-CORE/06-CICD/GitLab-CI/GitLab-CI-Overview.md
+        - Pipelines: DEVOPS-CORE/06-CICD/GitLab-CI/GitLab-CI-Pipelines.md
+        - Runners: DEVOPS-CORE/06-CICD/GitLab-CI/GitLab-Runners.md
+        - Legacy Guide: DEVOPS-CORE/06-CICD/GitLab-CI/GitLab-CI.md
+      - Azure DevOps:
+        - Overview: DEVOPS-CORE/06-CICD/Azure-DevOps/Azure-DevOps-Overview.md
+        - Pipelines: DEVOPS-CORE/06-CICD/Azure-DevOps/Azure-Pipelines.md
+        - Legacy Guide: DEVOPS-CORE/06-CICD/Azure-DevOps/Azure-DevOps.md
+      - ArgoCD:
+        - Overview: DEVOPS-CORE/06-CICD/ArgoCD/ArgoCD-Overview.md
+        - Installation: DEVOPS-CORE/06-CICD/ArgoCD/ArgoCD-Installation.md
+        - Applications: DEVOPS-CORE/06-CICD/ArgoCD/ArgoCD-Applications.md
+        - Advanced: DEVOPS-CORE/06-CICD/ArgoCD/ArgoCD-Advanced.md
+        - Legacy Guide: DEVOPS-CORE/06-CICD/ArgoCD/README.md
       - SonarQube:
         - Overview: DEVOPS-CORE/06-CICD/SonarQube/README.md
         - Server Setup: DEVOPS-CORE/06-CICD/SonarQube/1-Server-Setup.md
