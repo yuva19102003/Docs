@@ -529,3 +529,837 @@ function generateId() {
     return `item-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
 }
 ```
+
+### Step 4: Cosmos DB Bindings Configuration
+```json
+// CreateItem/function.json
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": ["post"]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "out",
+      "name": "outputDocument",
+      "databaseName": "FunctionsDB",
+      "collectionName": "Items",
+      "createIfNotExists": true,
+      "connectionStringSetting": "CosmosDBConnection"
+    }
+  ]
+}
+```
+
+### Step 5: Cosmos DB Trigger Function
+```javascript
+// CosmosDBTrigger/index.js
+module.exports = async function (context, documents) {
+    if (!!documents && documents.length > 0) {
+        context.log('Document count:', documents.length);
+        
+        for (const doc of documents) {
+            context.log('Processing document:', doc.id);
+            
+            // React to changes in Cosmos DB
+            await processDocumentChange(doc, context);
+        }
+    }
+};
+
+async function processDocumentChange(doc, context) {
+    // Example: Send notification, update cache, trigger workflow
+    context.log('Document changed:', {
+        id: doc.id,
+        category: doc.category,
+        name: doc.name
+    });
+    
+    // Add your business logic here
+}
+```
+
+```json
+// CosmosDBTrigger/function.json
+{
+  "bindings": [
+    {
+      "type": "cosmosDBTrigger",
+      "name": "documents",
+      "direction": "in",
+      "leaseCollectionName": "leases",
+      "connectionStringSetting": "CosmosDBConnection",
+      "databaseName": "FunctionsDB",
+      "collectionName": "Items",
+      "createLeaseCollectionIfNotExists": true
+    }
+  ]
+}
+```
+
+### Step 6: Configure Connection String
+```bash
+# Get Cosmos DB connection string
+COSMOS_CONNECTION=$(az cosmosdb keys list \
+  --name cosmos-functions-demo \
+  --resource-group rg-functions-demo \
+  --type connection-strings \
+  --query "connectionStrings[0].connectionString" -o tsv)
+
+# Add to Function App settings
+az functionapp config appsettings set \
+  --name func-demo-app-001 \
+  --resource-group rg-functions-demo \
+  --settings "CosmosDBConnection=${COSMOS_CONNECTION}"
+```
+
+---
+
+## Tutorial 6: Durable Functions
+
+Durable Functions enable stateful workflows in serverless environments.
+
+### Step 1: Install Durable Functions Extension
+```bash
+npm install durable-functions
+```
+
+### Step 2: Create Orchestrator Function
+```javascript
+// DurableOrchestrator/index.js
+const df = require("durable-functions");
+
+module.exports = df.orchestrator(function* (context) {
+    const outputs = [];
+    
+    // Sequential execution
+    outputs.push(yield context.df.callActivity("ActivityFunction", "Step 1"));
+    outputs.push(yield context.df.callActivity("ActivityFunction", "Step 2"));
+    outputs.push(yield context.df.callActivity("ActivityFunction", "Step 3"));
+    
+    // Parallel execution
+    const parallelTasks = [];
+    parallelTasks.push(context.df.callActivity("ActivityFunction", "Parallel 1"));
+    parallelTasks.push(context.df.callActivity("ActivityFunction", "Parallel 2"));
+    parallelTasks.push(context.df.callActivity("ActivityFunction", "Parallel 3"));
+    
+    const parallelResults = yield context.df.Task.all(parallelTasks);
+    outputs.push(...parallelResults);
+    
+    return outputs;
+});
+```
+
+### Step 3: Create Activity Function
+```javascript
+// ActivityFunction/index.js
+module.exports = async function (context) {
+    const input = context.bindings.name;
+    context.log(`Processing: ${input}`);
+    
+    // Simulate work
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    return `Completed: ${input}`;
+};
+```
+
+### Step 4: Create HTTP Starter
+```javascript
+// DurableHttpStart/index.js
+const df = require("durable-functions");
+
+module.exports = async function (context, req) {
+    const client = df.getClient(context);
+    const instanceId = await client.startNew("DurableOrchestrator", undefined, req.body);
+    
+    context.log(`Started orchestration with ID = '${instanceId}'.`);
+    
+    return client.createCheckStatusResponse(context.bindingData.req, instanceId);
+};
+```
+
+### Step 5: Configuration Files
+```json
+// DurableOrchestrator/function.json
+{
+  "bindings": [
+    {
+      "name": "context",
+      "type": "orchestrationTrigger",
+      "direction": "in"
+    }
+  ]
+}
+```
+
+```json
+// ActivityFunction/function.json
+{
+  "bindings": [
+    {
+      "name": "name",
+      "type": "activityTrigger",
+      "direction": "in"
+    }
+  ]
+}
+```
+
+```json
+// DurableHttpStart/function.json
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in",
+      "methods": ["post"]
+    },
+    {
+      "name": "$return",
+      "type": "http",
+      "direction": "out"
+    },
+    {
+      "name": "starter",
+      "type": "durableClient",
+      "direction": "in"
+    }
+  ]
+}
+```
+
+### Step 6: Test Durable Function
+```bash
+# Start orchestration
+curl -X POST https://func-demo-app-001.azurewebsites.net/api/DurableHttpStart \
+  -H "Content-Type: application/json" \
+  -d '{"input": "test data"}'
+
+# Response includes status URLs:
+# - statusQueryGetUri: Check status
+# - sendEventPostUri: Send events
+# - terminatePostUri: Terminate instance
+```
+
+---
+
+## Deployment Strategies
+
+### Method 1: Azure CLI Deployment
+```bash
+# Deploy from local project
+func azure functionapp publish func-demo-app-001
+
+# Deploy with specific settings
+func azure functionapp publish func-demo-app-001 \
+  --build remote \
+  --publish-local-settings
+```
+
+### Method 2: ZIP Deployment
+```bash
+# Create deployment package
+zip -r function-app.zip .
+
+# Deploy ZIP
+az functionapp deployment source config-zip \
+  --resource-group rg-functions-demo \
+  --name func-demo-app-001 \
+  --src function-app.zip
+```
+
+### Method 3: GitHub Actions CI/CD
+```yaml
+# .github/workflows/deploy-function.yml
+name: Deploy Azure Function
+
+on:
+  push:
+    branches: [ main ]
+
+env:
+  AZURE_FUNCTIONAPP_NAME: func-demo-app-001
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'
+  NODE_VERSION: '18.x'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run tests
+      run: npm test
+
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Deploy to Azure Functions
+      uses: Azure/functions-action@v1
+      with:
+        app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
+        package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+        publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
+```
+
+### Method 4: Azure DevOps Pipeline
+```yaml
+# azure-pipelines.yml
+trigger:
+  branches:
+    include:
+    - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  azureSubscription: 'Azure-Service-Connection'
+  functionAppName: 'func-demo-app-001'
+  workingDirectory: '$(System.DefaultWorkingDirectory)'
+
+stages:
+- stage: Build
+  jobs:
+  - job: Build
+    steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '18.x'
+      displayName: 'Install Node.js'
+
+    - script: |
+        npm install
+        npm run build --if-present
+        npm run test --if-present
+      displayName: 'Install and Build'
+      workingDirectory: $(workingDirectory)
+
+    - task: ArchiveFiles@2
+      inputs:
+        rootFolderOrFile: '$(workingDirectory)'
+        includeRootFolder: false
+        archiveType: 'zip'
+        archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+      displayName: 'Archive files'
+
+    - publish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+      artifact: drop
+
+- stage: Deploy
+  dependsOn: Build
+  jobs:
+  - deployment: Deploy
+    environment: 'production'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureFunctionApp@1
+            inputs:
+              azureSubscription: '$(azureSubscription)'
+              appType: 'functionApp'
+              appName: '$(functionAppName)'
+              package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
+```
+
+### Method 5: Terraform Deployment
+```hcl
+# main.tf
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 3.0"
+    }
+  }
+}
+
+provider "azurerm" {
+  features {}
+}
+
+resource "azurerm_resource_group" "functions" {
+  name     = "rg-functions-demo"
+  location = "East US"
+}
+
+resource "azurerm_storage_account" "functions" {
+  name                     = "stfunctionsdemo001"
+  resource_group_name      = azurerm_resource_group.functions.name
+  location                 = azurerm_resource_group.functions.location
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+}
+
+resource "azurerm_service_plan" "functions" {
+  name                = "asp-functions-demo"
+  resource_group_name = azurerm_resource_group.functions.name
+  location            = azurerm_resource_group.functions.location
+  os_type             = "Linux"
+  sku_name            = "Y1"
+}
+
+resource "azurerm_linux_function_app" "functions" {
+  name                       = "func-demo-app-001"
+  resource_group_name        = azurerm_resource_group.functions.name
+  location                   = azurerm_resource_group.functions.location
+  service_plan_id            = azurerm_service_plan.functions.id
+  storage_account_name       = azurerm_storage_account.functions.name
+  storage_account_access_key = azurerm_storage_account.functions.primary_access_key
+
+  site_config {
+    application_stack {
+      node_version = "18"
+    }
+  }
+
+  app_settings = {
+    "FUNCTIONS_WORKER_RUNTIME" = "node"
+    "WEBSITE_RUN_FROM_PACKAGE" = "1"
+  }
+}
+```
+
+---
+
+## Monitoring and Debugging
+
+### Enable Application Insights
+```bash
+# Create Application Insights
+az monitor app-insights component create \
+  --app func-insights-demo \
+  --location eastus \
+  --resource-group rg-functions-demo \
+  --application-type web
+
+# Get instrumentation key
+INSTRUMENTATION_KEY=$(az monitor app-insights component show \
+  --app func-insights-demo \
+  --resource-group rg-functions-demo \
+  --query instrumentationKey -o tsv)
+
+# Configure Function App
+az functionapp config appsettings set \
+  --name func-demo-app-001 \
+  --resource-group rg-functions-demo \
+  --settings "APPINSIGHTS_INSTRUMENTATIONKEY=${INSTRUMENTATION_KEY}"
+```
+
+### Custom Logging
+```javascript
+module.exports = async function (context, req) {
+    // Different log levels
+    context.log('Information message');
+    context.log.warn('Warning message');
+    context.log.error('Error message');
+    context.log.verbose('Verbose message');
+    
+    // Structured logging
+    context.log({
+        level: 'info',
+        message: 'User action',
+        userId: req.body.userId,
+        action: 'login',
+        timestamp: new Date().toISOString()
+    });
+    
+    // Track custom metrics
+    const startTime = Date.now();
+    await performOperation();
+    const duration = Date.now() - startTime;
+    
+    context.log.metric('OperationDuration', duration);
+};
+```
+
+### Query Application Insights
+```kusto
+// Function execution times
+requests
+| where cloud_RoleName == "func-demo-app-001"
+| summarize avg(duration), percentile(duration, 95) by name
+| order by avg_duration desc
+
+// Failed requests
+requests
+| where cloud_RoleName == "func-demo-app-001" and success == false
+| project timestamp, name, resultCode, duration
+| order by timestamp desc
+
+// Custom logs
+traces
+| where cloud_RoleName == "func-demo-app-001"
+| where message contains "User action"
+| project timestamp, message, severityLevel
+| order by timestamp desc
+
+// Dependencies (external calls)
+dependencies
+| where cloud_RoleName == "func-demo-app-001"
+| summarize count() by name, type
+| order by count_ desc
+```
+
+### Local Debugging with VS Code
+```json
+// .vscode/launch.json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach to Node Functions",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "preLaunchTask": "func: host start"
+    }
+  ]
+}
+```
+
+```json
+// .vscode/tasks.json
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "func",
+      "command": "host start",
+      "problemMatcher": "$func-node-watch",
+      "isBackground": true
+    }
+  ]
+}
+```
+
+### View Logs in Real-Time
+```bash
+# Stream logs
+az webapp log tail \
+  --name func-demo-app-001 \
+  --resource-group rg-functions-demo
+
+# Download logs
+az webapp log download \
+  --name func-demo-app-001 \
+  --resource-group rg-functions-demo \
+  --log-file function-logs.zip
+```
+
+---
+
+## Best Practices
+
+### 1. Function Design
+```javascript
+// ✅ Good: Single responsibility
+module.exports = async function (context, req) {
+    const userId = req.body.userId;
+    const user = await getUserById(userId);
+    context.res = { body: user };
+};
+
+// ❌ Bad: Multiple responsibilities
+module.exports = async function (context, req) {
+    // Don't mix concerns in one function
+    await processPayment();
+    await sendEmail();
+    await updateInventory();
+    await generateReport();
+};
+```
+
+### 2. Error Handling
+```javascript
+module.exports = async function (context, req) {
+    try {
+        const result = await riskyOperation();
+        
+        context.res = {
+            status: 200,
+            body: { success: true, data: result }
+        };
+    } catch (error) {
+        context.log.error('Operation failed:', error);
+        
+        // Return appropriate error response
+        context.res = {
+            status: error.statusCode || 500,
+            body: {
+                success: false,
+                error: error.message,
+                requestId: context.invocationId
+            }
+        };
+    }
+};
+```
+
+### 3. Connection Management
+```javascript
+// ✅ Good: Reuse connections
+let cosmosClient;
+
+module.exports = async function (context, req) {
+    // Initialize once, reuse across invocations
+    if (!cosmosClient) {
+        cosmosClient = new CosmosClient(process.env.CosmosDBConnection);
+    }
+    
+    const database = cosmosClient.database('FunctionsDB');
+    const container = database.container('Items');
+    
+    const { resources } = await container.items.readAll().fetchAll();
+    context.res = { body: resources };
+};
+
+// ❌ Bad: Create new connection every time
+module.exports = async function (context, req) {
+    const client = new CosmosClient(process.env.CosmosDBConnection);
+    // This creates overhead on every invocation
+};
+```
+
+### 4. Environment Variables
+```javascript
+// ✅ Good: Use environment variables
+const config = {
+    apiKey: process.env.API_KEY,
+    endpoint: process.env.API_ENDPOINT,
+    timeout: parseInt(process.env.TIMEOUT || '30000')
+};
+
+// ❌ Bad: Hardcode sensitive data
+const apiKey = "sk-1234567890abcdef"; // Never do this!
+```
+
+### 5. Async/Await Patterns
+```javascript
+// ✅ Good: Proper async handling
+module.exports = async function (context, req) {
+    const results = await Promise.all([
+        fetchUserData(userId),
+        fetchOrderData(orderId),
+        fetchInventory(productId)
+    ]);
+    
+    return { body: results };
+};
+
+// ❌ Bad: Blocking operations
+module.exports = function (context, req) {
+    // Missing async/await
+    fetchData().then(result => {
+        context.res = { body: result };
+    });
+    // Function may complete before promise resolves
+};
+```
+
+### 6. Cold Start Optimization
+```javascript
+// Initialize outside handler for warm starts
+const dependencies = require('./dependencies');
+const config = loadConfiguration();
+
+module.exports = async function (context, req) {
+    // Handler code executes faster on warm starts
+    const result = await processRequest(req, config);
+    context.res = { body: result };
+};
+```
+
+### 7. Timeout Configuration
+```json
+// host.json
+{
+  "version": "2.0",
+  "functionTimeout": "00:05:00",
+  "logging": {
+    "applicationInsights": {
+      "samplingSettings": {
+        "isEnabled": true,
+        "maxTelemetryItemsPerSecond": 20
+      }
+    }
+  },
+  "extensions": {
+    "http": {
+      "routePrefix": "api",
+      "maxOutstandingRequests": 200,
+      "maxConcurrentRequests": 100,
+      "dynamicThrottlesEnabled": true
+    }
+  }
+}
+```
+
+### 8. Security Best Practices
+```javascript
+// Input validation
+module.exports = async function (context, req) {
+    // Validate input
+    if (!req.body || !req.body.email) {
+        context.res = {
+            status: 400,
+            body: { error: 'Email is required' }
+        };
+        return;
+    }
+    
+    // Sanitize input
+    const email = sanitizeEmail(req.body.email);
+    
+    // Validate format
+    if (!isValidEmail(email)) {
+        context.res = {
+            status: 400,
+            body: { error: 'Invalid email format' }
+        };
+        return;
+    }
+    
+    // Process validated input
+    await processEmail(email);
+};
+
+function sanitizeEmail(email) {
+    return email.trim().toLowerCase();
+}
+
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+```
+
+### 9. Managed Identity
+```bash
+# Enable system-assigned managed identity
+az functionapp identity assign \
+  --name func-demo-app-001 \
+  --resource-group rg-functions-demo
+
+# Grant access to Key Vault
+az keyvault set-policy \
+  --name kv-functions-demo \
+  --object-id <MANAGED_IDENTITY_PRINCIPAL_ID> \
+  --secret-permissions get list
+```
+
+```javascript
+// Use managed identity to access Key Vault
+const { DefaultAzureCredential } = require("@azure/identity");
+const { SecretClient } = require("@azure/keyvault-secrets");
+
+const credential = new DefaultAzureCredential();
+const vaultUrl = `https://kv-functions-demo.vault.azure.net`;
+const client = new SecretClient(vaultUrl, credential);
+
+module.exports = async function (context, req) {
+    const secret = await client.getSecret("DatabasePassword");
+    // Use secret.value securely
+};
+```
+
+### 10. Testing
+```javascript
+// function.test.js
+const httpFunction = require('./HttpTriggerDemo');
+
+describe('HTTP Trigger Function', () => {
+    test('should return greeting with name', async () => {
+        const context = {
+            log: jest.fn(),
+            res: {}
+        };
+        
+        const req = {
+            query: { name: 'Azure' },
+            body: {}
+        };
+        
+        await httpFunction(context, req);
+        
+        expect(context.res.status).toBe(200);
+        expect(context.res.body).toContain('Hello, Azure');
+    });
+    
+    test('should return default message without name', async () => {
+        const context = {
+            log: jest.fn(),
+            res: {}
+        };
+        
+        const req = {
+            query: {},
+            body: {}
+        };
+        
+        await httpFunction(context, req);
+        
+        expect(context.res.status).toBe(200);
+        expect(context.res.body).toContain('Pass a name');
+    });
+});
+```
+
+---
+
+## Additional Resources
+
+### Official Documentation
+- [Azure Functions Documentation](https://docs.microsoft.com/azure/azure-functions/)
+- [Azure Functions Best Practices](https://docs.microsoft.com/azure/azure-functions/functions-best-practices)
+- [Durable Functions Documentation](https://docs.microsoft.com/azure/azure-functions/durable/)
+
+### Pricing Calculator
+- [Azure Functions Pricing](https://azure.microsoft.com/pricing/details/functions/)
+
+### Sample Projects
+- [Azure Functions Samples](https://github.com/Azure/Azure-Functions)
+- [Serverless Community Library](https://serverlesslibrary.net/)
+
+### Monitoring and Troubleshooting
+- [Monitor Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)
+- [Diagnose and solve problems](https://docs.microsoft.com/azure/azure-functions/functions-diagnostics)
+
+---
+
+## Summary
+
+This guide covered:
+- ✅ HTTP, Timer, Blob, and Queue triggers
+- ✅ Cosmos DB integration
+- ✅ Durable Functions for workflows
+- ✅ Multiple deployment strategies
+- ✅ Monitoring with Application Insights
+- ✅ Security and best practices
+- ✅ Testing and debugging
+
+You now have a complete foundation for building production-ready Azure Functions!
