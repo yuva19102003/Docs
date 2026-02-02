@@ -312,6 +312,40 @@ nav:
       - Overview: DEVOPS-CORE/16-INTERVIEW-QUESTIONS/README.md
       - DevOps Fundamentals: DEVOPS-CORE/16-INTERVIEW-QUESTIONS/01-DevOps-Fundamentals.md
       - Kubernetes: DEVOPS-CORE/16-INTERVIEW-QUESTIONS/04-Kubernetes.md
+    
+    - 17. Kubernetes:
+      - Overview: DEVOPS-CORE/17-KUBERNETES/README.md
+      - Kubernetes Overview: DEVOPS-CORE/17-KUBERNETES/00-OVERVIEW.md
+      - Architecture: DEVOPS-CORE/17-KUBERNETES/01-Architecture.md
+      - Objects: DEVOPS-CORE/17-KUBERNETES/02-Objects.md
+      - Pods: DEVOPS-CORE/17-KUBERNETES/03-Pods.md
+      - Workloads: DEVOPS-CORE/17-KUBERNETES/04-Workloads.md
+      - Networking Overview: DEVOPS-CORE/17-KUBERNETES/05-Networking-Overview.md
+      - Services: DEVOPS-CORE/17-KUBERNETES/06-Services.md
+      - Ingress: DEVOPS-CORE/17-KUBERNETES/07-Ingress.md
+      - Network Policies: DEVOPS-CORE/17-KUBERNETES/08-Network-Policies.md
+      - Storage Overview: DEVOPS-CORE/17-KUBERNETES/09-Storage-Overview.md
+      - Persistent Volumes: DEVOPS-CORE/17-KUBERNETES/10-Persistent-Volumes.md
+      - Storage Classes: DEVOPS-CORE/17-KUBERNETES/11-Storage-Classes.md
+      - ConfigMaps: DEVOPS-CORE/17-KUBERNETES/12-ConfigMaps.md
+      - Secrets: DEVOPS-CORE/17-KUBERNETES/13-Secrets.md
+      - Security Overview: DEVOPS-CORE/17-KUBERNETES/14-Security-Overview.md
+      - RBAC: DEVOPS-CORE/17-KUBERNETES/15-RBAC.md
+      - Pod Security: DEVOPS-CORE/17-KUBERNETES/16-Pod-Security.md
+      - Network Security: DEVOPS-CORE/17-KUBERNETES/17-Network-Security.md
+      - Operators: DEVOPS-CORE/17-KUBERNETES/18-Operators.md
+      - Custom Resources: DEVOPS-CORE/17-KUBERNETES/19-Custom-Resources.md
+      - Helm: DEVOPS-CORE/17-KUBERNETES/20-Helm.md
+      - Autoscaling: DEVOPS-CORE/17-KUBERNETES/21-Autoscaling.md
+      - kubectl Commands: DEVOPS-CORE/17-KUBERNETES/22-kubectl-Commands.md
+      - Cluster Setup: DEVOPS-CORE/17-KUBERNETES/23-Cluster-Setup.md
+      - Monitoring: DEVOPS-CORE/17-KUBERNETES/24-Monitoring.md
+      - Logging: DEVOPS-CORE/17-KUBERNETES/25-Logging.md
+      - Troubleshooting: DEVOPS-CORE/17-KUBERNETES/26-Troubleshooting.md
+      - CI/CD Workflows: DEVOPS-CORE/17-KUBERNETES/27-CICD-Workflows.md
+      - GitOps: DEVOPS-CORE/17-KUBERNETES/28-GitOps.md
+      - Best Practices: DEVOPS-CORE/17-KUBERNETES/29-Best-Practices.md
+      - Multi-Tenancy: DEVOPS-CORE/17-KUBERNETES/30-Multi-Tenancy.md
 
   - Cloud Platforms:
     
@@ -334,7 +368,8 @@ nav:
         - AWS Containers Overview: CLOUD/AWS/AWS CONTAINERS/0-AWS-CONTAINERS.md
         - ECR: CLOUD/AWS/AWS CONTAINERS/AWS ECR.md
         - ECS: CLOUD/AWS/AWS CONTAINERS/AWS ECS.md
-        - EKS: CLOUD/AWS/AWS CONTAINERS/AWS EKS.md
+        - EKS Complete Guide: CLOUD/AWS/AWS CONTAINERS/AWS-EKS-Complete-Guide.md
+        - EKS Quick Reference: CLOUD/AWS/AWS CONTAINERS/AWS-EKS-Quick-Reference.md
         - Fargate: CLOUD/AWS/AWS CONTAINERS/AWS Fargate.md
         - App Runner: CLOUD/AWS/AWS CONTAINERS/AWS App Runner.md
       
