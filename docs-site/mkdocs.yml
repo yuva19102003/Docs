@@ -719,6 +719,17 @@ nav:
         - Hybrid & Multicloud:
           - Azure Arc: CLOUD/AZURE/SERVICES/Hybrid & Multicloud/Azure-Arc.md
           - Azure Lighthouse: CLOUD/AZURE/SERVICES/Hybrid & Multicloud/Azure-Lighthouse.md
+        - Azure Containers:
+          - ACR: CLOUD/AZURE/SERVICES/Azure Containers/azure-acr.md
+          - AKS: CLOUD/AZURE/SERVICES/Azure Containers/azure-aks.md
+        - Azure Monitoring:
+          - Overview: CLOUD/AZURE/SERVICES/Azure-Monitoring/Azure-Monitoring.md
+          - Monitoring Overview: CLOUD/AZURE/SERVICES/Azure-Monitoring/01-Overview.md
+          - Log Analytics: CLOUD/AZURE/SERVICES/Azure-Monitoring/02-Log-Analytics.md
+          - KQL Queries: CLOUD/AZURE/SERVICES/Azure-Monitoring/03-KQL-Queries.md
+          - Dashboards: CLOUD/AZURE/SERVICES/Azure-Monitoring/04-Dashboards.md
+          - Alerts: CLOUD/AZURE/SERVICES/Azure-Monitoring/05-Alerts.md
+          - Availability Tests: CLOUD/AZURE/SERVICES/Azure-Monitoring/06-Availability-Tests.md
 
   - Cybersecurity:
     - Basics: CYBERSECURITY/Basics of Cybersecurity.md
