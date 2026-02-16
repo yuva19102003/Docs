@@ -514,27 +514,21 @@ stages:
 
 ### Architecture
 
-                    inlineScript: |
-                      # Get AKS credentials
-                      az aks get-credentials \
-                        --resource-group $(resourceGroup) \
-                        --name my-aks-cluster
-                      
-                      # Deploy to Kubernetes
-                      kubectl apply -f k8s/
+
+
+# Get AKS credentials
+az aks get-credentials \
+  --resource-group $(resourceGroup) \
+  --name my-aks-cluster
+
+# Deploy to Kubernetes
+kubectl apply -f k8s/
+
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│                    Jenkins OIDC Architecture                            │
+│                    Jenkins OIDC Architecture                           │
 └────────────────────────────────────────────────────────────────────────┘
 
-                    inlineScript: |
-                      # Get AKS credentials
-                      az aks get-credentials \
-                        --resource-group $(resourceGroup) \
-                        --name my-aks-cluster
-                      
-                      # Deploy to Kubernetes
-                      kubectl apply -f k8s/
 ┌──────────────────────────────────────────────────────────────┐
 │                    Jenkins Server                             │
 │                                                               │
