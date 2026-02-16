@@ -703,6 +703,7 @@ nav:
           - Service Principals vs Managed Identities: CLOUD/AZURE/SERVICES/MICROSOFT-INTRA-ID/3c-service-principals-vs-managed-identities.md
           - Auth with Azure AD: CLOUD/AZURE/SERVICES/MICROSOFT-INTRA-ID/4-Auth-with-Azure-AD.md
           - Auth with Terraform: CLOUD/AZURE/SERVICES/MICROSOFT-INTRA-ID/5-Auth-with-Azure-Terraform.md
+          - OIDC Setup for CI/CD: CLOUD/AZURE/SERVICES/MICROSOFT-INTRA-ID/6-OIDC-Setup-CI-CD.md
         - Networking Services:
           - VNet: CLOUD/AZURE/SERVICES/Networking Services/Azure-VNet.md
           - NSG: CLOUD/AZURE/SERVICES/Networking Services/NSG.md
