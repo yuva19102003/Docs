@@ -133,7 +133,10 @@ nav:
         - File Management: DEVOPS-CORE/02-OPERATING-SYSTEM/Linux/07-File-Management.md
         - Networking: DEVOPS-CORE/02-OPERATING-SYSTEM/Linux/08-Networking.md
         - Shell Scripting: DEVOPS-CORE/02-OPERATING-SYSTEM/Linux/09-Shell-Scripting.md
-    
+      - Windows:
+        - Powershell Commands: DEVOPS-CORE\02-OPERATING-SYSTEM\WINDOWS\01-powershell-commands.md
+        - Powershell Scripting: DEVOPS-CORE\02-OPERATING-SYSTEM\WINDOWS\02-powershell-scripts.md
+        
     - 03. Git:
       - Overview: DEVOPS-CORE/03-GIT/README.md
       - Git Fundamentals: DEVOPS-CORE/03-GIT/0-Git-Fundamentals.md
