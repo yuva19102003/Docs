@@ -1,189 +1,468 @@
+# 📌 1️⃣ What is Git?
 
-# Git Commmands
+**Git** is a distributed version control system used to track code changes and collaborate.
+
+* Created by Linus Torvalds
+* Official site: Git
+* Popular hosting: GitHub, GitLab, Bitbucket
 
 ---
 
-### Setting Up a Repository
+# 📌 2️⃣ Installation
 
-1. **Initialize a new Git repository:**
-   ```sh
-   git init
-   ```
+### Windows
 
-2. **Clone an existing repository:**
-   ```sh
-   git clone https://github.com/user/repo.git
-   ```
+Download from git-scm.com
 
-### Basic Workflow
+### Ubuntu
 
-3. **Check the status of your repository:**
-   ```sh
-   git status
-   ```
+```bash
+sudo apt update
+sudo apt install git -y
+```
 
-4. **Add changes to the staging area:**
-   ```sh
-   git add filename
-   # or add all changes
-   git add .
-   ```
+### Verify
 
-5. **Commit changes:**
-   ```sh
-   git commit -m "Commit message"
-   ```
+```bash
+git --version
+```
 
-### Branching and Merging
+---
 
-6. **Create a new branch:**
-   ```sh
-   git branch new-branch
-   ```
+# 📌 3️⃣ Initial Setup (VERY IMPORTANT)
 
-7. **Switch to a different branch:**
-   ```sh
-   git checkout new-branch
-   ```
+```bash
+git config --global user.name "YuvaDevOps"
+git config --global user.email "yuvaraj.k@raidenlabs.io"
+```
 
-8. **Create and switch to a new branch:**
-   ```sh
-   git checkout -b new-branch
-   ```
+Check:
 
-9. **Merge a branch into the current branch:**
-   ```sh
-   git merge branch-to-merge
-   ```
+```bash
+git config --list
+```
 
-### Remote Repositories
+---
 
-10. **Add a remote repository:**
-    ```sh
-    git remote add origin https://github.com/user/repo.git
-    ```
+# 📌 4️⃣ Core Git Concepts
 
-11. **Set the remote URL with a token (as per your example):**
-    ```sh
-    git remote set-url origin https://$GITHUB_TOKEN@github.com/yuva19102003/portfolio.git
-    ```
+| Concept           | Meaning                      |
+| ----------------- | ---------------------------- |
+| Working Directory | Your project files           |
+| Staging Area      | Prepared changes             |
+| Repository (.git) | Git database                 |
+| Commit            | Snapshot                     |
+| Branch            | Separate line of development |
+| Remote            | Cloud repo                   |
 
-12. **Push changes to a remote repository:**
-    ```sh
-    git push origin main
-    ```
+---
 
-13. **Pull changes from a remote repository:**
-    ```sh
-    git pull origin main
-    ```
+# 📌 5️⃣ Basic Workflow (Daily Use)
 
-14. **Fetch changes from a remote repository (without merging):**
-    ```sh
-    git fetch origin
-    ```
+## Step 1: Initialize Repo
 
-### Viewing History
+```bash
+git init
+```
 
-15. **View commit history:**
-    ```sh
-    git log
-    ```
+## Step 2: Add Files
 
-16. **View a summarized commit history (one line per commit):**
-    ```sh
-    git log --oneline
-    ```
+```bash
+git add .
+```
 
-### Undoing Changes
+## Step 3: Commit
 
-17. **Unstage a file:**
-    ```sh
-    git reset HEAD filename
-    ```
+```bash
+git commit -m "Initial commit"
+```
 
-18. **Revert changes in a file to the last committed state:**
-    ```sh
-    git checkout -- filename
-    ```
+## Step 4: Check Status
 
-19. **Revert a specific commit:**
-    ```sh
-    git revert commit-hash
-    ```
+```bash
+git status
+```
 
-### Stashing Changes
+## Step 5: View History
 
-20. **Stash changes:**
-    ```sh
-    git stash
-    ```
+```bash
+git log --oneline --graph
+```
 
-21. **List stashed changes:**
-    ```sh
-    git stash list
-    ```
+---
 
-22. **Apply stashed changes:**
-    ```sh
-    git stash apply
-    ```
+# 📌 6️⃣ Connect to Remote (GitHub Example)
 
-### Working with Tags
+```bash
+git remote add origin https://github.com/username/repo.git
+git branch -M main
+git push -u origin main
+```
 
-23. **Create a new tag:**
-    ```sh
-    git tag -a v1.0 -m "Version 1.0"
-    ```
+---
 
-24. **Push tags to the remote repository:**
-    ```sh
-    git push origin --tags
-    ```
+# 📌 7️⃣ Branching (Very Important for Real Projects)
 
-### Example Workflow
+## Create Branch
 
-Let's go through a typical workflow using some of these commands:
+```bash
+git checkout -b feature/login
+```
 
-1. **Clone a repository:**
-   ```sh
-   git clone https://github.com/yuva19102003/portfolio.git
-   cd portfolio
-   ```
+## Switch Branch
 
-2. **Create a new branch:**
-   ```sh
-   git checkout -b new-feature
-   ```
+```bash
+git checkout main
+```
 
-3. **Make changes to files and add them to the staging area:**
-   ```sh
-   git add .
-   ```
+## Merge Branch
 
-4. **Commit your changes:**
-   ```sh
-   git commit -m "Add new feature"
-   ```
+```bash
+git merge feature/login
+```
 
-5. **Push your changes to the remote repository:**
-   ```sh
-   git push origin new-feature
-   ```
+---
 
-6. **Switch back to the main branch:**
-   ```sh
-   git checkout main
-   ```
+# 📌 8️⃣ Merge Conflicts (Most Common Interview Question)
 
-7. **Merge the new feature branch into the main branch:**
-   ```sh
-   git merge new-feature
-   ```
+When two developers change same lines.
 
-8. **Push the updated main branch to the remote repository:**
-   ```sh
-   git push origin main
-   ```
+### Resolve:
 
-This workflow demonstrates how to clone a repository, create and switch branches, make and commit changes, and push those changes to a remote repository.
+1. Open file
+2. Fix conflict
+3. Add again
+
+```bash
+git add .
+git commit
+```
+
+---
+
+# 📌 9️⃣ Pull & Fetch
+
+```bash
+git pull origin main
+```
+
+Better way:
+
+```bash
+git fetch
+git merge origin/main
+```
+
+---
+
+# 📌 🔟 Rebase (Advanced)
+
+Rebase keeps history clean.
+
+```bash
+git checkout feature
+git rebase main
+```
+
+⚠️ Never rebase shared branch.
+
+---
+
+# 📌 11️⃣ Stash (Save Work Temporarily)
+
+```bash
+git stash
+git stash list
+git stash apply
+git stash pop
+```
+
+---
+
+# 📌 12️⃣ Undo Scenarios (VERY IMPORTANT)
+
+### Undo last commit (keep changes)
+
+```bash
+git reset --soft HEAD~1
+```
+
+### Undo and delete changes
+
+```bash
+git reset --hard HEAD~1
+```
+
+### Restore file
+
+```bash
+git restore file.txt
+```
+
+---
+
+# 📌 13️⃣ Cherry Pick
+
+Take commit from another branch:
+
+```bash
+git cherry-pick <commit-id>
+```
+
+---
+
+# 📌 14️⃣ Tagging (Release Versioning)
+
+```bash
+git tag v1.0
+git push origin v1.0
+```
+
+---
+
+# 📌 15️⃣ Git Workflow Models
+
+## 1️⃣ Git Flow
+
+* main
+* develop
+* feature/*
+* release/*
+* hotfix/*
+
+## 2️⃣ GitHub Flow
+
+* main
+* feature branches
+
+Most modern teams use **GitHub Flow**.
+
+---
+
+# 📌 16️⃣ Working with Forks
+
+1. Fork repo
+2. Clone fork
+3. Add upstream
+
+```bash
+git remote add upstream https://github.com/original/repo.git
+git fetch upstream
+git merge upstream/main
+```
+
+---
+
+# 📌 17️⃣ Submodules
+
+Add another repo inside project:
+
+```bash
+git submodule add https://github.com/user/lib.git
+```
+
+Update:
+
+```bash
+git submodule update --init --recursive
+```
+
+---
+
+# 📌 18️⃣ Large Files (Git LFS)
+
+```bash
+git lfs install
+git lfs track "*.zip"
+```
+
+---
+
+# 📌 19️⃣ Fixing Mistakes & Recovery
+
+### Deleted branch?
+
+```bash
+git reflog
+git checkout -b recovered <commit-id>
+```
+
+### Remove remote branch
+
+```bash
+git push origin --delete feature/login
+```
+
+---
+
+# 📌 20️⃣ DevOps + CI/CD Usage
+
+### In GitHub Actions
+
+```yaml
+- uses: actions/checkout@v4
+```
+
+### Docker build from repo
+
+```bash
+docker build -t app:v1 .
+```
+
+### Tag version automatically
+
+```bash
+git tag v1.1
+git push origin v1.1
+```
+
+---
+
+# 📌 21️⃣ Real World Scenarios (Important)
+
+### 🔥 Scenario 1: Force push?
+
+```bash
+git push --force
+```
+
+⚠️ Dangerous. Avoid on shared branches.
+
+---
+
+### 🔥 Scenario 2: Remove sensitive file
+
+```bash
+git rm --cached .env
+```
+
+Add to `.gitignore`
+
+---
+
+### 🔥 Scenario 3: Rename branch
+
+```bash
+git branch -m old-name new-name
+```
+
+---
+
+### 🔥 Scenario 4: Squash commits
+
+```bash
+git rebase -i HEAD~3
+```
+
+---
+
+# 📌 22️⃣ .gitignore Example
+
+```
+node_modules/
+.env
+dist/
+*.log
+```
+
+---
+
+# 📌 23️⃣ Git Best Practices
+
+✔ Small commits
+✔ Meaningful messages
+✔ Pull before push
+✔ Never commit secrets
+✔ Use feature branches
+✔ Protect main branch
+
+---
+
+# 📌 24️⃣ Interview Questions
+
+* Difference between merge and rebase?
+* What is detached HEAD?
+* What is git reflog?
+* Explain git stash internally?
+* How git stores objects? (Blob, Tree, Commit)
+
+---
+
+# 📌 25️⃣ Internal Architecture (Deep Level)
+
+Git stores objects in:
+
+```
+.git/objects
+```
+
+Types:
+
+* Blob
+* Tree
+* Commit
+* Tag
+
+Git uses SHA-1 hash.
+
+---
+
+# 📌 26️⃣ Advanced Commands
+
+```bash
+git bisect
+git blame
+git clean -fd
+git revert
+git worktree
+```
+
+---
+
+# 📌 27️⃣ Enterprise Workflow (DevOps Engineer Level)
+
+For your DevOps background:
+
+1. Feature branch
+2. PR
+3. Code review
+4. CI pipeline
+5. Merge
+6. Auto tag
+7. Docker build
+8. Deploy via Terraform
+
+---
+
+# 📌 28️⃣ Complete Real Project Flow
+
+```bash
+git clone repo
+git checkout -b feature/payment
+# code
+git add .
+git commit -m "Add payment API"
+git push origin feature/payment
+# create PR
+# merge after review
+git checkout main
+git pull
+```
+
+---
+
+# 🎯 Final Summary
+
+If you master:
+
+* Branching
+* Rebase
+* Conflict resolution
+* Reflog recovery
+* CI integration
+* Tagging strategy
+* Git internals
+
+👉 You are **production-ready Git user**
+
+---

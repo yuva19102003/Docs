@@ -138,7 +138,7 @@ nav:
       - Overview: DEVOPS-CORE/03-GIT/README.md
       - Git Fundamentals: DEVOPS-CORE/03-GIT/0-Git-Fundamentals.md
       - Git Commands: DEVOPS-CORE/03-GIT/1-Git-Commands.md
-      - GitHub Token Setup: DEVOPS-CORE/03-GIT/2-GitHub-Token-Setup.md
+      - GitHub Scenario: DEVOPS-CORE/03-GIT/2-GitHub-Scenario.md
 
     - 04. Networking:
       - Overview: DEVOPS-CORE/04-NETWORKING/README.md
