@@ -349,6 +349,7 @@ nav:
       - GitOps: DEVOPS-CORE/17-KUBERNETES/28-GitOps.md
       - Best Practices: DEVOPS-CORE/17-KUBERNETES/29-Best-Practices.md
       - Multi-Tenancy: DEVOPS-CORE/17-KUBERNETES/30-Multi-Tenancy.md
+      - Istio: DEVOPS-CORE\17-KUBERNETES\31-Istio.md
 
   - Cloud Platforms:
     
