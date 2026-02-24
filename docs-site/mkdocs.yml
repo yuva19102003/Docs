@@ -134,8 +134,8 @@ nav:
         - Networking: DEVOPS-CORE/02-OPERATING-SYSTEM/Linux/08-Networking.md
         - Shell Scripting: DEVOPS-CORE/02-OPERATING-SYSTEM/Linux/09-Shell-Scripting.md
       - Windows:
-        - Powershell Commands: DEVOPS-CORE\02-OPERATING-SYSTEM\WINDOWS\01-powershell-commands.md
-        - Powershell Scripting: DEVOPS-CORE\02-OPERATING-SYSTEM\WINDOWS\02-powershell-scripts.md
+        - Powershell Commands: DEVOPS-CORE/02-OPERATING-SYSTEM/WINDOWS/01-powershell-commands.md
+        - Powershell Scripting: DEVOPS-CORE/02-OPERATING-SYSTEM/WINDOWS/02-powershell-scripts.md
         
     - 03. Git:
       - Overview: DEVOPS-CORE/03-GIT/README.md
@@ -349,7 +349,7 @@ nav:
       - GitOps: DEVOPS-CORE/17-KUBERNETES/28-GitOps.md
       - Best Practices: DEVOPS-CORE/17-KUBERNETES/29-Best-Practices.md
       - Multi-Tenancy: DEVOPS-CORE/17-KUBERNETES/30-Multi-Tenancy.md
-      - Istio: DEVOPS-CORE\17-KUBERNETES\31-Istio.md
+      - Istio: DEVOPS-CORE/17-KUBERNETES/31-Istio.md
 
   - Cloud Platforms:
     
