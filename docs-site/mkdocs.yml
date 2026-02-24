@@ -149,6 +149,9 @@ nav:
       - IP Addressing: DEVOPS-CORE/04-NETWORKING/01-IP-Addressing.md
       - Subnetting & CIDR: DEVOPS-CORE/04-NETWORKING/02-Subnetting-and-CIDR.md
       - Ports & Protocols: DEVOPS-CORE/04-NETWORKING/03-Ports-and-Protocols.md
+      - Error Codes: DEVOPS-CORE/04-NETWORKING/04-Error-codes.md
+      - DNS: DEVOPS-CORE/04-NETWORKING/05-DNS.md
+      - DNS Rules: DEVOPS-CORE/04-NETWORKING/06-DNS-Rules.md
     
     - 05. Containerization:
       - Overview: DEVOPS-CORE/05-CONTAINERIZATION/README.md
