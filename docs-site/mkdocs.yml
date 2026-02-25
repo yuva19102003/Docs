@@ -353,6 +353,23 @@ nav:
       - Best Practices: DEVOPS-CORE/17-KUBERNETES/29-Best-Practices.md
       - Multi-Tenancy: DEVOPS-CORE/17-KUBERNETES/30-Multi-Tenancy.md
       - Istio: DEVOPS-CORE/17-KUBERNETES/31-Istio.md
+    
+    - 18. HAProxy:
+      - HAProxy: DEVOPS-CORE/18-HAPROXY/haproxy.md
+    
+    - 19. OpenShift:
+      - Overview: DEVOPS-CORE/19-OPENSHIFT/README.md
+      - OpenShift Overview: DEVOPS-CORE/19-OPENSHIFT/0-Overview.md
+      - Components: DEVOPS-CORE/19-OPENSHIFT/1-Components.md
+      - Architecture: DEVOPS-CORE/19-OPENSHIFT/2-Architecture.md
+      - OpenShift CLI: DEVOPS-CORE/19-OPENSHIFT/3-OC.md
+      - Deploy Web Service: DEVOPS-CORE/19-OPENSHIFT/4-Deploy-Web-service.md
+      - Projects & Namespaces: DEVOPS-CORE/19-OPENSHIFT/5-Projects-Namespaces.md
+      - Routes & Ingress: DEVOPS-CORE/19-OPENSHIFT/6-Routes-Ingress.md
+      - Storage: DEVOPS-CORE/19-OPENSHIFT/7-Storage.md
+      - Security: DEVOPS-CORE/19-OPENSHIFT/8-Security.md
+      - Monitoring & Logging: DEVOPS-CORE/19-OPENSHIFT/9-Monitoring-Logging.md
+      - CI/CD: DEVOPS-CORE/19-OPENSHIFT/10-CI-CD.md
 
   - Cloud Platforms:
     
