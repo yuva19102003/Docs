@@ -370,6 +370,19 @@ nav:
       - Security: DEVOPS-CORE/19-OPENSHIFT/8-Security.md
       - Monitoring & Logging: DEVOPS-CORE/19-OPENSHIFT/9-Monitoring-Logging.md
       - CI/CD: DEVOPS-CORE/19-OPENSHIFT/10-CI-CD.md
+    
+    - 20. Podman:
+      - Overview: DEVOPS-CORE/20-PODMAN/README.md
+      - Podman Overview: DEVOPS-CORE/20-PODMAN/0-Overview.md
+      - Installation: DEVOPS-CORE/20-PODMAN/1-Installation.md
+      - Basic Commands: DEVOPS-CORE/20-PODMAN/2-Basic-Commands.md
+      - Images: DEVOPS-CORE/20-PODMAN/3-Images.md
+      - Containers: DEVOPS-CORE/20-PODMAN/4-Containers.md
+      - Pods: DEVOPS-CORE/20-PODMAN/5-Pods.md
+      - Networking: DEVOPS-CORE/20-PODMAN/6-Networking.md
+      - Volumes: DEVOPS-CORE/20-PODMAN/7-Volumes.md
+      - Compose: DEVOPS-CORE/20-PODMAN/8-Compose.md
+      - systemd Integration: DEVOPS-CORE/20-PODMAN/9-Systemd-Integration.md
 
   - Cloud Platforms:
     
