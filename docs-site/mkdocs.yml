@@ -663,6 +663,58 @@ nav:
         - PTR Records: CLOUD/DIGITAL-OCEAN/NETWORKING/6-PTR-RECORDS.md
         - Multi-Cloud Integration: CLOUD/DIGITAL-OCEAN/NETWORKING/7-MULTI-CLOUD-INTEGRATION.md
 
+    - GCP:
+      - Overview: CLOUD/GCP/README.md
+      - Documentation Summary: CLOUD/GCP/DOCUMENTATION-SUMMARY.md
+      - Solution Architect Guide: CLOUD/GCP/gcp-solution-architect.md
+      
+      - 1️⃣ GCP Fundamentals:
+        - Overview: CLOUD/GCP/1️⃣ GCP Fundamentals/0-Overview.md
+        - Regions & Zones: CLOUD/GCP/1️⃣ GCP Fundamentals/1-regions-zones.md
+        - Resource Hierarchy: CLOUD/GCP/1️⃣ GCP Fundamentals/2-Resource-hierarchy.md
+        - Shared Responsibility Model: CLOUD/GCP/1️⃣ GCP Fundamentals/3-Shared-responsibility-model.md
+        - Google Cloud Console: CLOUD/GCP/1️⃣ GCP Fundamentals/4-google-console.md
+        - Google Cloud SDK: CLOUD/GCP/1️⃣ GCP Fundamentals/5-google-cloud-sdk.md
+      
+      - 2️⃣ Resource Hierarchy & Governance:
+        - Overview: CLOUD/GCP/2️⃣ Resource Hierarchy & Governance/0-Overview.md
+        - Organization: CLOUD/GCP/2️⃣ Resource Hierarchy & Governance/1-Organization.md
+        - Folders: CLOUD/GCP/2️⃣ Resource Hierarchy & Governance/2-Folders.md
+        - Projects: CLOUD/GCP/2️⃣ Resource Hierarchy & Governance/3-Projects.md
+        - Resource Manager: CLOUD/GCP/2️⃣ Resource Hierarchy & Governance/4-Resource-Manager.md
+      
+      - 3️⃣ Billing & Cost Management:
+        - Overview: CLOUD/GCP/3️⃣ Billing & Cost Management/0-Overview.md
+        - Billing Accounts: CLOUD/GCP/3️⃣ Billing & Cost Management/1-Billing-Accounts.md
+        - Cost Tracking: CLOUD/GCP/3️⃣ Billing & Cost Management/2-Cost-Tracking.md
+        - Budgets & Alerts: CLOUD/GCP/3️⃣ Billing & Cost Management/3-Budgets-Alerts.md
+        - Cost Optimization: CLOUD/GCP/3️⃣ Billing & Cost Management/4-Cost-Optimization.md
+        - Recommender: CLOUD/GCP/3️⃣ Billing & Cost Management/5-Recommender.md
+        - Pricing Models: CLOUD/GCP/3️⃣ Billing & Cost Management/6-Pricing-Models.md
+      
+      - 4️⃣ Identity & Access Management:
+        - Overview: CLOUD/GCP/4️⃣ Identity & Access Management/0-Overview.md
+        - IAM Fundamentals: CLOUD/GCP/4️⃣ Identity & Access Management/1-IAM-Fundamentals.md
+        - IAM Roles: CLOUD/GCP/4️⃣ Identity & Access Management/2-IAM-Roles.md
+        - Service Accounts: CLOUD/GCP/4️⃣ Identity & Access Management/3-Service-Accounts.md
+        - IAM Policies: CLOUD/GCP/4️⃣ Identity & Access Management/4-IAM-Policies.md
+        - Least Privilege: CLOUD/GCP/4️⃣ Identity & Access Management/5-Least-Privilege.md
+        - Identity-Aware Proxy: CLOUD/GCP/4️⃣ Identity & Access Management/6-Identity-Aware-Proxy.md
+        - Advanced IAM: CLOUD/GCP/4️⃣ Identity & Access Management/7-Advanced-IAM.md
+        - Best Practices: CLOUD/GCP/4️⃣ Identity & Access Management/8-Best-Practices.md
+      
+      - 5️⃣ API & Service Management:
+        - Overview: CLOUD/GCP/5️⃣ API & Service Management/0-Overview.md
+        - Service APIs: CLOUD/GCP/5️⃣ API & Service Management/1-Service-APIs.md
+        - Enabling APIs: CLOUD/GCP/5️⃣ API & Service Management/2-Enabling-APIs.md
+        - Service Quotas: CLOUD/GCP/5️⃣ API & Service Management/3-Service-Quotas.md
+        - API Gateway: CLOUD/GCP/5️⃣ API & Service Management/4-API-Gateway.md
+        - Service Usage API: CLOUD/GCP/5️⃣ API & Service Management/5-Service-Usage-API.md
+        - API Monitoring: CLOUD/GCP/5️⃣ API & Service Management/6-API-Monitoring.md
+      
+      - 6️⃣ Networking:
+        - Overview: CLOUD/GCP/6️⃣ Networking/0-Overview.md
+
     - Azure:
       - Overview: CLOUD/AZURE/README.md
       - Azure Cloud Topics: CLOUD/AZURE/0-AZURE-CLOUD-TOPICS.md
