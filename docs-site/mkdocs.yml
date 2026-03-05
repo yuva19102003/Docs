@@ -714,6 +714,18 @@ nav:
       
       - 6️⃣ Networking:
         - Overview: CLOUD/GCP/6️⃣ Networking/0-Overview.md
+        - VPC: CLOUD/GCP/6️⃣ Networking/1-VPC.md
+        - Subnets: CLOUD/GCP/6️⃣ Networking/2-Subnets.md
+        - Firewall Rules: CLOUD/GCP/6️⃣ Networking/3-Firewall-Rules.md
+        - IP Addressing: CLOUD/GCP/6️⃣ Networking/4-IP-Addressing.md
+        - Routing: CLOUD/GCP/6️⃣ Networking/5-Routing.md
+        - Cloud NAT: CLOUD/GCP/6️⃣ Networking/6-Cloud-NAT.md
+        - Load Balancing: CLOUD/GCP/6️⃣ Networking/7-Load-Balancing.md
+        - Cloud DNS: CLOUD/GCP/6️⃣ Networking/8-Cloud-DNS.md
+        - Cloud CDN: CLOUD/GCP/6️⃣ Networking/9-Cloud-CDN.md
+        - Cloud VPN: CLOUD/GCP/6️⃣ Networking/10-Cloud-VPN.md
+        - Cloud Interconnect: CLOUD/GCP/6️⃣ Networking/11-Cloud-Interconnect.md
+        - Network Security: CLOUD/GCP/6️⃣ Networking/12-Network-Security.md
 
     - Azure:
       - Overview: CLOUD/AZURE/README.md

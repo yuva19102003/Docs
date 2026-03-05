@@ -178,6 +178,18 @@ Control API access and service configuration:
 Master GCP networking - critical for cloud architects:
 
 - **[Overview](./6️⃣%20Networking/0-Overview.md)** - Complete guide
+- **[VPC](./6️⃣%20Networking/1-VPC.md)** - Virtual Private Cloud
+- **[Subnets](./6️⃣%20Networking/2-Subnets.md)** - Subnet configuration
+- **[Firewall Rules](./6️⃣%20Networking/3-Firewall-Rules.md)** - Network security
+- **[IP Addressing](./6️⃣%20Networking/4-IP-Addressing.md)** - IP management
+- **[Routing](./6️⃣%20Networking/5-Routing.md)** - Traffic routing
+- **[Cloud NAT](./6️⃣%20Networking/6-Cloud-NAT.md)** - Outbound internet access
+- **[Load Balancing](./6️⃣%20Networking/7-Load-Balancing.md)** - Traffic distribution
+- **[Cloud DNS](./6️⃣%20Networking/8-Cloud-DNS.md)** - DNS management
+- **[Cloud CDN](./6️⃣%20Networking/9-Cloud-CDN.md)** - Content delivery
+- **[Cloud VPN](./6️⃣%20Networking/10-Cloud-VPN.md)** - VPN connectivity
+- **[Cloud Interconnect](./6️⃣%20Networking/11-Cloud-Interconnect.md)** - Dedicated connectivity
+- **[Network Security](./6️⃣%20Networking/12-Network-Security.md)** - Security features
 
 **Key Topics:**
 - VPC (Virtual Private Cloud)
@@ -187,6 +199,7 @@ Master GCP networking - critical for cloud architects:
 - Cloud DNS and CDN
 - VPN and Interconnect
 - Hybrid cloud connectivity
+- Network security best practices
 
 ---
 
@@ -271,18 +284,18 @@ gcloud config set project my-first-project-2026
 
 ```
 Total Sections: 6 (with more coming)
-Total Documents: 35+
-Total Diagrams: 150+
-Code Examples: 800+
-Best Practices: 300+
+Total Documents: 50+
+Total Diagrams: 200+
+Code Examples: 1,000+
+Best Practices: 400+
 
 Coverage:
 ✓ Fundamentals (6 files)
-✓ Governance (4 files)
-✓ Billing (6 files)
+✓ Governance (8 files)
+✓ Billing (8 files)
 ✓ IAM (8 files)
 ✓ APIs (6 files)
-✓ Networking (1 file - 12 more coming)
+✓ Networking (13 files)
 ⏳ Compute (Coming Soon)
 ⏳ Storage (Coming Soon)
 ⏳ Monitoring (Coming Soon)
