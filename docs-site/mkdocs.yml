@@ -665,7 +665,6 @@ nav:
 
     - GCP:
       - Overview: CLOUD/GCP/README.md
-      - Documentation Summary: CLOUD/GCP/DOCUMENTATION-SUMMARY.md
       - Solution Architect Guide: CLOUD/GCP/gcp-solution-architect.md
       
       - 1️⃣ GCP Fundamentals:
@@ -726,6 +725,42 @@ nav:
         - Cloud VPN: CLOUD/GCP/6️⃣ Networking/10-Cloud-VPN.md
         - Cloud Interconnect: CLOUD/GCP/6️⃣ Networking/11-Cloud-Interconnect.md
         - Network Security: CLOUD/GCP/6️⃣ Networking/12-Network-Security.md
+      
+      - 7️⃣ Compute Services:
+        - Overview: CLOUD/GCP/7️⃣ Compute Services/0-Overview.md
+        - Compute Engine: CLOUD/GCP/7️⃣ Compute Services/1-Compute-Engine.md
+        - Google Kubernetes Engine: CLOUD/GCP/7️⃣ Compute Services/2-GKE.md
+        - Cloud Run: CLOUD/GCP/7️⃣ Compute Services/3-Cloud-Run.md
+        - App Engine: CLOUD/GCP/7️⃣ Compute Services/4-App-Engine.md
+        - Cloud Functions: CLOUD/GCP/7️⃣ Compute Services/5-Cloud-Functions.md
+        - Compute Comparison: CLOUD/GCP/7️⃣ Compute Services/6-Compute-Comparison.md
+        - Best Practices: CLOUD/GCP/7️⃣ Compute Services/7-Best-Practices.md
+      
+      - 8️⃣ Storage:
+        - Overview: CLOUD/GCP/8️⃣ Storage/0-Overview.md
+        - Cloud Storage: CLOUD/GCP/8️⃣ Storage/1-Cloud-Storage.md
+        - Persistent Disk: CLOUD/GCP/8️⃣ Storage/2-Persistent-Disk.md
+        - Filestore: CLOUD/GCP/8️⃣ Storage/3-Filestore.md
+        - Storage Comparison: CLOUD/GCP/8️⃣ Storage/4-Storage-Comparison.md
+        - Best Practices: CLOUD/GCP/8️⃣ Storage/5-Best-Practices.md
+      
+      - 9️⃣ Databases:
+        - Overview: CLOUD/GCP/9️⃣ Databases/0-Overview.md
+        - Cloud SQL: CLOUD/GCP/9️⃣ Databases/1-Cloud-SQL.md
+        - Cloud Spanner: CLOUD/GCP/9️⃣ Databases/2-Cloud-Spanner.md
+        - Firestore: CLOUD/GCP/9️⃣ Databases/3-Firestore.md
+        - Bigtable: CLOUD/GCP/9️⃣ Databases/4-Bigtable.md
+        - Memorystore: CLOUD/GCP/9️⃣ Databases/5-Memorystore.md
+        - Database Comparison: CLOUD/GCP/9️⃣ Databases/6-Database-Comparison.md
+        - Best Practices: CLOUD/GCP/9️⃣ Databases/7-Best-Practices.md
+      
+      - 🔟 Containers & DevOps:
+        - Overview: CLOUD/GCP/🔟 Containers & DevOps/0-Overview.md
+        - Artifact Registry: CLOUD/GCP/🔟 Containers & DevOps/1-Artifact-Registry.md
+        - Cloud Build: CLOUD/GCP/🔟 Containers & DevOps/2-Cloud-Build.md
+        - Cloud Deploy: CLOUD/GCP/🔟 Containers & DevOps/3-Cloud-Deploy.md
+        - CI/CD Patterns: CLOUD/GCP/🔟 Containers & DevOps/4-CICD-Patterns.md
+        - Best Practices: CLOUD/GCP/🔟 Containers & DevOps/5-Best-Practices.md
 
     - Azure:
       - Overview: CLOUD/AZURE/README.md

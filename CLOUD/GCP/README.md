@@ -35,13 +35,19 @@ This guide is organized into progressive sections, each building on the previous
 6. Networking
    └─→ Design and implement network architecture
 
-7. Compute Services (Coming Soon)
+7. Compute Services
    └─→ Deploy and manage workloads
 
-8. Storage & Databases (Coming Soon)
+8. Storage
    └─→ Store and manage data
 
-9. Monitoring & Operations (Coming Soon)
+9. Databases
+   └─→ Managed database services
+
+10. Containers & DevOps
+    └─→ Container management and CI/CD
+
+11. Monitoring & Operations (Coming Soon)
    └─→ Observe and maintain systems
 
 10. Security & Compliance (Coming Soon)
@@ -203,6 +209,108 @@ Master GCP networking - critical for cloud architects:
 
 ---
 
+### [7️⃣ Compute Services](./7️⃣%20Compute%20Services/)
+
+**Deploy and manage workloads on GCP**
+
+Choose the right compute option for your applications:
+
+- **[Overview](./7️⃣%20Compute%20Services/0-Overview.md)** - Complete guide to all compute options
+- **[Compute Engine](./7️⃣%20Compute%20Services/1-Compute-Engine.md)** - Virtual machines (IaaS)
+- **[Google Kubernetes Engine](./7️⃣%20Compute%20Services/2-GKE.md)** - Managed Kubernetes (CaaS)
+- **[Cloud Run](./7️⃣%20Compute%20Services/3-Cloud-Run.md)** - Serverless containers
+- **[App Engine](./7️⃣%20Compute%20Services/4-App-Engine.md)** - Platform as a Service (PaaS)
+- **[Cloud Functions](./7️⃣%20Compute%20Services/5-Cloud-Functions.md)** - Serverless functions (FaaS)
+- **[Compute Comparison](./7️⃣%20Compute%20Services/6-Compute-Comparison.md)** - Detailed comparison
+- **[Best Practices](./7️⃣%20Compute%20Services/7-Best-Practices.md)** - Production guidelines
+
+**Key Topics:**
+- Compute Engine: VMs, machine types, auto-scaling, Spot VMs
+- GKE: Kubernetes clusters, Autopilot mode, Workload Identity
+- Cloud Run: Serverless containers, scale to zero, traffic splitting
+- App Engine: Standard/Flexible environments, built-in services
+- Cloud Functions: Event-driven, 2nd generation, triggers
+- Decision framework for choosing compute services
+- Cost optimization strategies (up to 91% savings)
+- High availability and disaster recovery
+
+---
+
+### [8️⃣ Storage](./8️⃣%20Storage/)
+
+**Store and manage data on GCP**
+
+Choose the right storage solution for your data:
+
+- **[Overview](./8️⃣%20Storage/0-Overview.md)** - Complete guide to all storage options
+- **[Cloud Storage](./8️⃣%20Storage/1-Cloud-Storage.md)** - Object storage service
+- **[Persistent Disk](./8️⃣%20Storage/2-Persistent-Disk.md)** - Block storage for VMs
+- **[Filestore](./8️⃣%20Storage/3-Filestore.md)** - Managed NFS file storage
+- **[Storage Comparison](./8️⃣%20Storage/4-Storage-Comparison.md)** - Detailed comparison
+- **[Best Practices](./8️⃣%20Storage/5-Best-Practices.md)** - Production guidelines
+
+**Key Topics:**
+- Cloud Storage: 4 storage classes, lifecycle management, versioning
+- Persistent Disk: 5 disk types, snapshots, regional disks
+- Filestore: 4 tiers, NFS protocol, shared file access
+- Storage type comparison (Object, Block, File)
+- Performance optimization and IOPS calculations
+- Cost optimization strategies (up to 99% savings)
+- Encryption options (default, CMEK, CSEK)
+- Disaster recovery and backup strategies
+
+---
+
+### [9️⃣ Databases](./9️⃣%20Databases/)
+
+**Managed database services on GCP**
+
+Choose the right database for your application:
+
+- **[Overview](./9️⃣%20Databases/0-Overview.md)** - Complete guide to all database options
+- **[Cloud SQL](./9️⃣%20Databases/1-Cloud-SQL.md)** - Managed MySQL, PostgreSQL, SQL Server
+- **[Cloud Spanner](./9️⃣%20Databases/2-Cloud-Spanner.md)** - Global relational database
+- **[Firestore](./9️⃣%20Databases/3-Firestore.md)** - Serverless document database
+- **[Bigtable](./9️⃣%20Databases/4-Bigtable.md)** - Wide-column NoSQL database
+- **[Memorystore](./9️⃣%20Databases/5-Memorystore.md)** - Managed Redis and Memcached
+- **[Database Comparison](./9️⃣%20Databases/6-Database-Comparison.md)** - Detailed comparison
+- **[Best Practices](./9️⃣%20Databases/7-Best-Practices.md)** - Production guidelines
+
+**Key Topics:**
+- Cloud SQL: MySQL, PostgreSQL, SQL Server, HA, read replicas
+- Cloud Spanner: Global scale, strong consistency, 99.999% SLA
+- Firestore: Document database, real-time sync, offline support
+- Bigtable: Petabyte-scale, sub-10ms latency, time-series data
+- Memorystore: Redis/Memcached, sub-millisecond latency, caching
+- Database selection framework and decision trees
+- Performance optimization and cost strategies
+- Migration paths from other databases
+
+---
+
+### [🔟 Containers & DevOps](./🔟%20Containers%20&%20DevOps/)
+
+**Container management and deployment automation**
+
+Master containerization and CI/CD on GCP:
+
+- **[Overview](./🔟%20Containers%20&%20DevOps/0-Overview.md)** - Complete guide to containers and DevOps
+- **[Artifact Registry](./🔟%20Containers%20&%20DevOps/1-Artifact-Registry.md)** - Modern artifact management
+- **[Cloud Build](./🔟%20Containers%20&%20DevOps/2-Cloud-Build.md)** - Serverless CI/CD platform
+- **[Cloud Deploy](./🔟%20Containers%20&%20DevOps/3-Cloud-Deploy.md)** - Managed continuous delivery
+- **[CI/CD Patterns](./🔟%20Containers%20&%20DevOps/4-CICD-Patterns.md)** - Implementation patterns
+- **[Best Practices](./🔟%20Containers%20&%20DevOps/5-Best-Practices.md)** - Production guidelines
+
+**Key Topics:**
+- Artifact Registry: Docker, Maven, npm, Python packages, vulnerability scanning
+- Cloud Build: Serverless builds, triggers, parallel execution, caching
+- Cloud Deploy: Progressive delivery, canary deployments, approval gates
+- CI/CD patterns: Branch-based, tag-based, multi-environment, microservices
+- Container optimization: Multi-stage builds, security, performance
+- DevOps workflows: Complete pipelines from code to production
+
+---
+
 ## 🚀 Quick Start
 
 ### For Beginners
@@ -259,9 +367,9 @@ gcloud config set project my-first-project-2026
 - Networking Basics ✓
 
 **Focus Areas:**
-- Compute services
-- Storage and databases
-- Networking
+- Compute services ✓
+- Storage services ✓
+- Networking ✓
 - Monitoring and logging
 
 ### Professional Cloud Architect
@@ -283,11 +391,11 @@ gcloud config set project my-first-project-2026
 ## 📊 Documentation Statistics
 
 ```
-Total Sections: 6 (with more coming)
-Total Documents: 50+
-Total Diagrams: 200+
-Code Examples: 1,000+
-Best Practices: 400+
+Total Sections: 10 (with more coming)
+Total Documents: 75+
+Total Diagrams: 400+
+Code Examples: 2,500+
+Best Practices: 800+
 
 Coverage:
 ✓ Fundamentals (6 files)
@@ -296,10 +404,11 @@ Coverage:
 ✓ IAM (8 files)
 ✓ APIs (6 files)
 ✓ Networking (13 files)
-⏳ Compute (Coming Soon)
-⏳ Storage (Coming Soon)
+✓ Compute (8 files)
+✓ Storage (5 files)
+✓ Databases (8 files)
+✓ Containers & DevOps (5 files)
 ⏳ Monitoring (Coming Soon)
-⏳ Security (Coming Soon)
 ```
 
 ---
@@ -337,7 +446,7 @@ Coverage:
 
 Follow the numbered sections in order:
 ```
-1️⃣ → 2️⃣ → 3️⃣ → 4️⃣ → 5️⃣ → 6️⃣
+1️⃣ → 2️⃣ → 3️⃣ → 4️⃣ → 5️⃣ → 6️⃣ → 7️⃣ → 8️⃣ → 9️⃣ → 🔟
 ```
 
 Each section builds on previous knowledge.
@@ -348,6 +457,10 @@ Jump to specific topics you need:
 - Need to set up billing? → Section 3
 - Need to configure IAM? → Section 4
 - Need to design network? → Section 6
+- Need to deploy applications? → Section 7
+- Need to store data? → Section 8
+- Need a database? → Section 9
+- Need CI/CD pipeline? → Section 10
 
 ### 3. Reference Guide
 
@@ -406,20 +519,7 @@ This documentation is continuously updated with:
 
 ### Coming Soon
 
-- **7️⃣ Compute Services**
-  - Compute Engine (VMs)
-  - Google Kubernetes Engine (GKE)
-  - Cloud Run (Serverless)
-  - App Engine (PaaS)
-
-- **8️⃣ Storage & Databases**
-  - Cloud Storage
-  - Cloud SQL
-  - Cloud Spanner
-  - Firestore
-  - Bigtable
-
-- **9️⃣ Monitoring & Operations**
+- **🔟 Monitoring & Operations**
   - Cloud Monitoring
   - Cloud Logging
   - Cloud Trace
