@@ -761,6 +761,51 @@ nav:
         - Cloud Deploy: CLOUD/GCP/🔟 Containers & DevOps/3-Cloud-Deploy.md
         - CI/CD Patterns: CLOUD/GCP/🔟 Containers & DevOps/4-CICD-Patterns.md
         - Best Practices: CLOUD/GCP/🔟 Containers & DevOps/5-Best-Practices.md
+      
+      - 1️⃣1️⃣ Monitoring & Logging:
+        - Overview: CLOUD/GCP/1️⃣1️⃣ Monitoring & Logging/0-Overview.md
+        - Cloud Monitoring: CLOUD/GCP/1️⃣1️⃣ Monitoring & Logging/1-Cloud-Monitoring.md
+        - Cloud Logging: CLOUD/GCP/1️⃣1️⃣ Monitoring & Logging/2-Cloud-Logging.md
+        - Cloud Trace: CLOUD/GCP/1️⃣1️⃣ Monitoring & Logging/3-Cloud-Trace.md
+        - Error Reporting: CLOUD/GCP/1️⃣1️⃣ Monitoring & Logging/4-Error-Reporting.md
+        - Cloud Profiler: CLOUD/GCP/1️⃣1️⃣ Monitoring & Logging/5-Cloud-Profiler.md
+        - Best Practices: CLOUD/GCP/1️⃣1️⃣ Monitoring & Logging/6-Best-Practices.md
+      
+      - 1️⃣2️⃣ Security:
+        - Overview: CLOUD/GCP/1️⃣2️⃣ Security/0-Overview.md
+        - Secret Manager: CLOUD/GCP/1️⃣2️⃣ Security/1-Secret-Manager.md
+        - Cloud KMS: CLOUD/GCP/1️⃣2️⃣ Security/2-Cloud-KMS.md
+        - Cloud Armor: CLOUD/GCP/1️⃣2️⃣ Security/3-Cloud-Armor.md
+        - Security Command Center: CLOUD/GCP/1️⃣2️⃣ Security/4-Security-Command-Center.md
+        - VPC Service Controls: CLOUD/GCP/1️⃣2️⃣ Security/5-VPC-Service-Controls.md
+        - Best Practices: CLOUD/GCP/1️⃣2️⃣ Security/6-Best-Practices.md
+      
+      - 1️⃣3️⃣ Messaging & Event Driven Systems:
+        - Overview: CLOUD/GCP/1️⃣3️⃣ Messaging & Event Driven Systems/0-Overview.md
+        - Pub/Sub: CLOUD/GCP/1️⃣3️⃣ Messaging & Event Driven Systems/1-Pub-Sub.md
+        - Eventarc: CLOUD/GCP/1️⃣3️⃣ Messaging & Event Driven Systems/2-Eventarc.md
+        - Cloud Tasks: CLOUD/GCP/1️⃣3️⃣ Messaging & Event Driven Systems/3-Cloud-Tasks.md
+        - Cloud Scheduler: CLOUD/GCP/1️⃣3️⃣ Messaging & Event Driven Systems/4-Cloud-Scheduler.md
+        - Workflows: CLOUD/GCP/1️⃣3️⃣ Messaging & Event Driven Systems/5-Workflows.md
+        - Best Practices: CLOUD/GCP/1️⃣3️⃣ Messaging & Event Driven Systems/6-Best-Practices.md
+      
+      - 1️⃣4️⃣ Data Analytics:
+        - Overview: CLOUD/GCP/1️⃣4️⃣ Data Analytics/0-Overview.md
+        - BigQuery: CLOUD/GCP/1️⃣4️⃣ Data Analytics/1-BigQuery.md
+        - Dataflow: CLOUD/GCP/1️⃣4️⃣ Data Analytics/2-Dataflow.md
+        - Dataproc: CLOUD/GCP/1️⃣4️⃣ Data Analytics/3-Dataproc.md
+      
+      - 1️⃣5️⃣ Architecture & Design Patterns:
+        - Overview: CLOUD/GCP/1️⃣5️⃣ Architecture & Design Patterns/0-Overview.md
+        - High Availability: CLOUD/GCP/1️⃣5️⃣ Architecture & Design Patterns/1-High-Availability.md
+        - Disaster Recovery: CLOUD/GCP/1️⃣5️⃣ Architecture & Design Patterns/2-Disaster-Recovery.md
+      
+      - Study Resources:
+        - Interview Questions: CLOUD/GCP/GCP-Interview-Questions.md
+        - Case Studies: CLOUD/GCP/Case-Studies.md
+        - Cost Optimization Guide: CLOUD/GCP/Cost-Optimization-Guide.md
+        - Quick Reference: CLOUD/GCP/Quick-Reference.md
+        - Complete Index: CLOUD/GCP/INDEX.md
 
     - Azure:
       - Overview: CLOUD/AZURE/README.md
