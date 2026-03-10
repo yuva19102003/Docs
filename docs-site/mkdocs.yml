@@ -214,22 +214,22 @@ nav:
     - 08. Infrastructure as Code:
       - Terraform:
         - Overview: DEVOPS-CORE/08-IAC/Terraform/README.md
-        - Installation: DEVOPS-CORE/08-IAC/Terraform/installation/README.md
-        - Structure & Commands: DEVOPS-CORE/08-IAC/Terraform/Structure and Commands/README.md
-        - Advanced Configuration:
-          - Overview: DEVOPS-CORE/08-IAC/Terraform/Advanced Configuration/README.md
-          - Variables & Output: DEVOPS-CORE/08-IAC/Terraform/Advanced Configuration/variable-output.md
-          - Conditional & Functions: DEVOPS-CORE/08-IAC/Terraform/Advanced Configuration/conditional-expression-and-builtin-function.md
-          - Multi Providers: DEVOPS-CORE/08-IAC/Terraform/Advanced Configuration/multi-providers-resources.md
-        - Modules:
-          - Overview: DEVOPS-CORE/08-IAC/Terraform/Modules/README.md
-          - Modules Guide: DEVOPS-CORE/08-IAC/Terraform/Modules/terraform-modules-guide.md
-        - Workspaces:
-          - Overview: DEVOPS-CORE/08-IAC/Terraform/Workspaces/README.md
-          - Workspaces Examples: DEVOPS-CORE/08-IAC/Terraform/Workspaces/terraform-workspaces-examples.md
-        - Remote Backend: DEVOPS-CORE/08-IAC/Terraform/remote backend/README.md
-        - Userdata & Provisioning: DEVOPS-CORE/08-IAC/Terraform/userdata and provisioning/README.md
-        - Hashicorp Vault: DEVOPS-CORE/08-IAC/Terraform/hashicorp vault/README.md
+        - Index: DEVOPS-CORE/08-IAC/Terraform/INDEX.md
+        - Cheat Sheet: DEVOPS-CORE/08-IAC/Terraform/TERRAFORM-ASSOCIATE-004-CHEAT-SHEET.md
+        - 01. IaC Concepts: DEVOPS-CORE/08-IAC/Terraform/01-IaC-Concepts/README.md
+        - 02. Core Workflow: DEVOPS-CORE/08-IAC/Terraform/02-Core-Workflow/workflow-commands.md
+        - 03. HCL Configuration:
+          - Meta Arguments: DEVOPS-CORE/08-IAC/Terraform/03-HCL-Configuration/meta-arguments.md
+          - Lifecycle: DEVOPS-CORE/08-IAC/Terraform/03-HCL-Configuration/lifecycle.md
+        - 04. State Management: DEVOPS-CORE/08-IAC/Terraform/04-State-Management/README.md
+        - 06. Modules:
+          - Module Sources: DEVOPS-CORE/08-IAC/Terraform/06-Modules/module-sources.md
+        - 08. Expressions & Loops: DEVOPS-CORE/08-IAC/Terraform/08-Expressions-Loops/README.md
+        - 12. Diagrams: DEVOPS-CORE/08-IAC/Terraform/12-Diagrams/README.md
+        - 14. Interview Questions: DEVOPS-CORE/08-IAC/Terraform/14-Interview-Questions/README.md
+        - 15. Terraform Cloud: DEVOPS-CORE/08-IAC/Terraform/15-Terraform-Cloud/README.md
+        - 16. Security Best Practices: DEVOPS-CORE/08-IAC/Terraform/16-Security-Best-Practices/README.md
+        - 17. Exam Study Guide: DEVOPS-CORE/08-IAC/Terraform/17-Exam-Study-Guide/README.md
       - Packer:
         - Packer Guide: DEVOPS-CORE/08-IAC/Packer/packer.md
         - Packer Examples: DEVOPS-CORE/08-IAC/Packer/packer-examples.md
