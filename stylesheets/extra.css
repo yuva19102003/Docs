@@ -1,0 +1,24 @@
+/* Remove gaps between navigation sections and screen edges */
+
+/* Remove left gap from primary sidebar (left navigation) */
+.md-sidebar--primary {
+    left: 0;
+}
+
+/* Remove right gap from secondary sidebar (table of contents) */
+.md-sidebar--secondary {
+    right: 0;
+}
+
+/* Ensure the main container uses full width */
+.md-container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Remove margins from the grid */
+.md-grid {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+}
